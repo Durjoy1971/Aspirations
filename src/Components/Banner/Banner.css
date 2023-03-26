@@ -1,0 +1,12 @@
+.caro {
+  background-color: rgba(0, 0, 0, 1);
+  padding-top: 40px;
+  height: 900px;
+}
+
+.banner_size {
+  height: 600px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
