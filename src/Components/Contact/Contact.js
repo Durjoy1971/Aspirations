@@ -47,20 +47,21 @@ const Contact = () => {
               <a
                 href="https://www.facebook.com/profile.php?id=100005243536152"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <i class="fa-brands fa-facebook"></i>
               </a>
-              <a href="https://github.com/Durjoy1971" target="_blank">
+              <a href="https://github.com/Durjoy1971" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://t.me/Durjoy_Barua" target="_blank">
+              <a href="https://t.me/Durjoy_Barua" target="_blank" rel="noopener noreferrer">
                 {" "}
                 <i class="fa-brands fa-telegram"></i>
               </a>
-              <a href="">
+              <a href="https://t.me/Durjoy_Barua" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-whatsapp"></i>
               </a>
-              <a href="">
+              <a href="https://t.me/Durjoy_Barua" target="_blank" rel="noopener noreferrer">
                 <i class="fa-brands fa-snapchat"></i>
               </a>
             </div>
