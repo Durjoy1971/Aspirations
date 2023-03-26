@@ -25,7 +25,8 @@ const Banner = () => {
           <div className="banner_size">
             <img
               className="image-size"
-              src="https://i.ibb.co/3WK5nR2/second-logo.png"
+              src="https://i.ibb.co/Qjpf4VS/first-logo.png"
+              // src="https://i.ibb.co/3WK5nR2/second-logo.png"
               alt="First slide"
             />
 
@@ -38,7 +39,8 @@ const Banner = () => {
           <div className="banner_size">
             <img
               className="image-size"
-              src="https://i.ibb.co/GC6bDhP/Third-logo.png"
+              src="https://i.ibb.co/Qjpf4VS/first-logo.png"
+              // src="https://i.ibb.co/GC6bDhP/Third-logo.png"
               alt="First slide"
             />
 
@@ -51,7 +53,8 @@ const Banner = () => {
           <div className="banner_size">
             <img
               className="image-size"
-              src="https://i.ibb.co/x1Nd2ts/Fourth-logo.png"
+              src="https://i.ibb.co/Qjpf4VS/first-logo.png"
+              // src="https://i.ibb.co/x1Nd2ts/Fourth-logo.png"
               alt="First slide"
             />
 
@@ -64,7 +67,8 @@ const Banner = () => {
           <div className="banner_size">
             <img
               className="image-size"
-              src="https://i.ibb.co/G9mTw3p/Fifth-logo.png"
+              src="https://i.ibb.co/Qjpf4VS/first-logo.png"
+              // src="https://i.ibb.co/G9mTw3p/Fifth-logo.png"
               alt="First slide"
             />
           </div>

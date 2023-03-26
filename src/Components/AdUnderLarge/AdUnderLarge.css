@@ -1,0 +1,55 @@
+* {
+  font-family: "poppins", sans-serif;
+}
+
+.Addiv {
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.AdLeft {
+  padding-top: 60px;
+  padding-right: 20px;
+}
+
+.AdCol1 {
+  width: 300px;
+  height: 150px;
+  background-color: rgb(202, 199, 199);
+
+  margin-left: 5px;
+  border-radius: 15px;
+}
+.AdCol2 {
+  width: 300px;
+  height: 150px;
+  background-color: rgb(162, 255, 240);
+
+  margin-left: 5px;
+  border-radius: 15px;
+}
+.AdCol3 {
+  width: 300px;
+  height: 150px;
+  background-color: rgb(162, 255, 240);
+
+  margin-left: 5px;
+  border-radius: 15px;
+}
+
+.AdCol4 {
+  width: 300px;
+  height: 150px;
+  background-color: rgb(202, 199, 199);
+
+  margin-left: 5px;
+  border-radius: 15px;
+}
+.AdCaption {
+  margin-top: 15%;
+  margin-left: 20px;
+}
+.AdCaption2 {
+  margin-left: 20px;
+}
