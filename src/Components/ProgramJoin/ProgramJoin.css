@@ -1,0 +1,28 @@
+.PJ-outer {
+    display: flex;
+    padding-left: 280px;
+    padding-right: 190px;
+    padding-top: 200px;
+    padding-bottom: 250px;
+  }
+  
+  .PJ-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+  }
+  
+  .PJ-content {
+    text-align: center;
+  }
+  
+  .PJ-right {
+    flex: 1;
+    background-image: url(https://media.tenor.com/yT1S6ZS2csEAAAAM/join-us-animated.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+  

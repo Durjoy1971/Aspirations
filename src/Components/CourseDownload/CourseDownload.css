@@ -5,8 +5,8 @@
     /* background-color: aqua; */
     justify-content: center;
     align-content: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 10px;
+    padding-bottom: 250px;
 }
 
 .CD_IMG{
@@ -19,10 +19,13 @@
     width: 50%;
     /* background-color: rgb(250, 234, 12); */
     margin: auto;
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    color: gold;
 }
 .btnDownload:hover{
+    color: gold;
     font-weight: bolder; 
-    background-color: #dc3545;
+    /* background-color: #dc3545; */
+    background-color: gray;
 }
 
