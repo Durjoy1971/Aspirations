@@ -4,10 +4,8 @@ import AdminLogin from "./Components/AdminLogin/AdminLogin";
 import Banner from "./Components/Banner/Banner";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
-import LikeSection from "./Components/LikeSection/LikeSection";
 import LogIn from "./Components/LogIn/LogIn";
 import Navigation from "./Components/Navigation/Navigation";
-import ProgramJoin from "./Components/ProgramJoin/Program";
 import Register from "./Components/Register/Register";
 
 /*
@@ -25,8 +23,6 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/AdminLogin" element={<AdminLogin />} />
       </Routes>
-      <ProgramJoin/>
-      <LikeSection/>
       <Footer />
     </div>
   );
