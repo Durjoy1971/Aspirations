@@ -32,8 +32,9 @@ const AdUnderLarge = () => {
                     <img
                      src="https://cdn.10minuteschool.com/lg/images/1667905292144.png"
                      alt="First slide"
-                     width="100%"
-                     height="90%">
+                     width="auto"
+                     height="90%"
+                     >
                     </img>
                 </div>
             </div>
