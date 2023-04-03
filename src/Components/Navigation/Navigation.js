@@ -7,7 +7,7 @@ const Navigation = () => {
     <div>
       <Navbar className="navbar" collapseOnSelect expand="lg" variant="dark">
         <Container>
-          <Navbar.Brand href="/AdminLogin">
+          <Navbar.Brand href="/home">
             <img
               className="image"
               src="https://i.ibb.co/TqTRGBq/Logo-01.png"
@@ -17,25 +17,28 @@ const Navigation = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link className="nav-point" href="/home">
+              <Nav.Link className="nav-point durjoy" href="/home">
                 Home
               </Nav.Link>
-              <Nav.Link className="nav-point" href="/home">
+              <Nav.Link className="nav-point durjoy" href="/home">
                 Class 1-5
               </Nav.Link>
-              <Nav.Link className="nav-point" href="/home">
+              <Nav.Link className="nav-point durjoy" href="/home">
                 Skills
               </Nav.Link>
-              <Nav.Link className="nav-point" href="/home">
+              <Nav.Link className="nav-point durjoy" href="/home">
                 Admission
               </Nav.Link>
-              <Nav.Link className="nav-point" href="/home">
+              <Nav.Link className="nav-point durjoy" href="/home">
                 Kid's Corner
               </Nav.Link>
             </Nav>
             <Nav className="ms-auto">
               <Nav.Link className="nav-point log-in-link" href="/logIn">
                 Log In
+              </Nav.Link>
+              <Nav.Link className="nav-point log-in-link" href="/AdminLogin">
+                Admin
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
