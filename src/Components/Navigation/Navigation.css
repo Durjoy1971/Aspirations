@@ -29,9 +29,14 @@
     border: 2px solid #ffffff;
     padding: 10px;
     border-radius: 10px;
+    transition: all .5s ease
   }
 
-.nav-point:hover{
+.log-in-link:hover{
+    color: gold;
+}
+
+.durjoy:hover{
     /* background-color: rgb(209, 209, 126);
     box-shadow: 0 0 20px lightyellow;
     color: black;
