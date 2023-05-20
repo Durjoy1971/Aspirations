@@ -1,0 +1,91 @@
+.kid-corner {
+    text-align: center;
+    padding: 190px 15vw;
+    /* background-color: #ff4f4f; */
+  }
+  
+  .kid-corner-heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .kid-corner-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .kid-corner-card {
+    position: relative;
+    width: 300px;
+    height: 320px;
+    background-color:#ff4f4f;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .kid-corner-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .kid-corner-card-image {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .kid-corner-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .kid-corner-card:hover .kid-corner-card-image img {
+    transform: scale(1.1);
+  }
+  
+  .kid-corner-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .kid-corner-card:hover .kid-corner-card-content {
+    transform: translateY(0%);
+  }
+  
+  .kid-corner-card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .kid-corner-card-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .kid-corner-card-button {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .kid-corner-card-button:hover {
+    background-color: #ff4f4f;
+  }

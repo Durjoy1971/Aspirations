@@ -1,0 +1,243 @@
+.maabout {
+  margin-top: 200px;
+  margin-bottom: 40px;
+}
+
+.maabout_1 {
+  border-left: 50px solid #34495e;
+  border-top: 5px solid #34495e;
+  border-bottom: 5px solid #34495e;
+  border-right: 5px solid #34495e;
+}
+
+.row_maabout {
+  display: flex;
+  width: 1254px;
+}
+.maabout_text1 {
+  margin-left: 60px;
+  margin-top: 10px;
+  color: orange;
+  font-weight: 900;
+}
+
+.maabout_text2 {
+  margin-left: 60px;
+  margin-top: 20px;
+  color: orange;
+  font-weight: 1000;
+  background: linear-gradient(85deg, #4885ab, orange);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.maabout_text3 {
+  margin-left: 60px;
+  margin-top: 40px;
+  color: black;
+  font-weight: 600;
+}
+.maabout_text4 {
+  margin-left: 60px;
+  margin-top: 10px;
+  color: black;
+  font-weight: 600;
+}
+
+.maabout_text5 {
+  margin-left: 300px;
+  margin-top: 50px;
+  color: orange;
+}
+
+.maabout_text6 {
+  margin-top: 50px;
+
+  color: rgb(126, 112, 112);
+  font-weight: 500;
+}
+
+.maabout_text7 {
+  margin-top: 30px;
+  color: rgb(38, 38, 103);
+
+  font-weight: 900;
+}
+
+.maabout_text8 {
+  margin-top: 10px;
+
+  color: rgb(126, 112, 112);
+  font-weight: 500;
+}
+.maabout_text9 {
+  margin-top: 50px;
+
+  color: rgb(126, 112, 112);
+  font-weight: 500;
+}
+
+.maabout_icon {
+  margin-left: 60px;
+}
+
+.maabout_img1 {
+  margin-left: 330px;
+}
+
+/* Statistics */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap");
+
+.stats-section {
+  background-color: white;
+  padding: 20px 0 100px;
+}
+
+.stats-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stats-card {
+  text-align: center;
+  padding: 30px;
+  margin: 20px;
+  width: 250px;
+  height: 180px;
+  border-radius: 20px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "League Spartan", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stats-card.card-1 {
+  margin-top: 90px;
+  /* background-color: #0077c0; */
+  background-color: hsl(170, 75%, 41%, 0.2);
+}
+
+.stats-card.card-2 {
+  margin-top: 90px;
+  /* background-color: #f57f17; */
+  background-color: hsl(351, 83%, 61%, 0.3);
+}
+
+.stats-card.card-3 {
+  margin-top: 90px;
+  /* background-color: #4caf50; */
+  background-color: hsl(260, 100%, 67%, 0.3);
+}
+
+.stats-card.card-4 {
+  margin-top: 90px;
+  /* background-color: #d32f2f; */
+  background-color: hsl(42, 94%, 55%, 0.25);
+}
+
+.stats-card-title-1 {
+  color: hsl(170, 75%, 41%);
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.stats-card-text {
+  color: black;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.stats-card-title-2 {
+  color: hsl(351, 83%, 61%);
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.stats-card-title-3 {
+  color: hsl(260, 100%, 67%);
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.stats-card-title-4 {
+  color: hsl(42, 94%, 55%);
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+
+
+/* Developer */
+
+.developers_container {
+  text-align: center;
+  margin-top: 100px;
+  
+}
+
+.developers_title {
+  margin-bottom: 20px;
+  color: rgb(38, 38, 103);
+}
+
+.developer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 80px 100px;
+}
+
+.part1,
+.part2 {
+  width: 48%;
+}
+
+.dev_img {
+  width: min(300px,15vw);
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.dev_card_img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.dev_about {
+  text-align: center;
+}
+
+.dev_name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dev_role {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.dev_intro {
+  font-size: 1.05rem;
+  color: #888;
+  font-weight: 500;
+}
+

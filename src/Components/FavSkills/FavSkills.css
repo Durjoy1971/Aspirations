@@ -1,0 +1,131 @@
+.fav-departments {
+  background-color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.fav-departments-title {
+  text-align: center;
+  margin: 20px auto 50px;
+  width: 40vw;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5vw;
+  font-weight: 700;
+  
+}
+
+.fav-departments-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fav-departments-card {
+  background: linear-gradient(
+    90deg,
+    hsl(38, 100%, 98%) 21.32%,
+    hsl(144, 45%, 98%) 130%
+  );
+  margin: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.fav-departments-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.fav-card-banner {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.fav-card-banner:before {
+  content: "";
+  display: block;
+  padding-bottom: 60%;
+}
+
+.fav-card-banner figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.fav-card-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fav-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+.fav-card-text {
+  font-size: 16px;
+  color: #555;
+  margin: 0 5px 20px;
+  text-align: center;
+}
+
+.fav-card-link {
+  display: inline-block;
+  margin: 0 20px 20px;
+  color: #fff;
+  background-color: #4caf50;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.fav-icon {
+  margin-left: 10px;
+}
+
+.fav-card-link:hover {
+  background-color: #3e8e41;
+}
+
+.fav-btn-primary {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin-top: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fav-btn-primary:hover {
+  background-color: #3e8e41;
+  color: black;
+}
+.fav-container{
+  position: relative;
+}
+
+.fav-vector-line{
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top:0
+}
