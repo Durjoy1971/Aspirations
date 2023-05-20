@@ -1,6 +1,7 @@
 import React from "react";
 import "./About.css";
 import { Link } from "react-router-dom";
+import IMG01 from "../images/about-banner.png"
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
         <div className="de_about_content">
           <img
             className="about-img"
-            src="https://i.ibb.co/JkRtJDz/about-banner.png://i.ibb.co/QbhS3jc/book.png"
+            src={IMG01}
             alt="about-banner"
           />
         </div>
@@ -18,9 +19,7 @@ const About = () => {
             We Help to Create Possibility & Success in Your Career!
           </h1>
           <p className="de_about_section">
-            Continually administrate process-centric human capital rather than
-            bleeding-edge methodologies. Distinctively supply accurate methods
-            of empowerment before.
+          Discover your potential and achieve career success with our tailored services. Our team of experts provides resume writing, interview coaching, and personalized career development plans. Let us guide you towards unlocking new possibilities and reaching your professional goals.
           </p>
           <Link to="/skills">
             <button className="btn btn-primary">Get Started Today</button>
