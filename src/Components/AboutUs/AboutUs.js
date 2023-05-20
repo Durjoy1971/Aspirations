@@ -10,7 +10,7 @@ const AboutUs = () => {
         <div className="row-aboutus">
           <div>
             <img
-              src="https://o.remove.bg/downloads/a88f853a-a5c1-44c5-a25d-c5d7904cb091/young-people-row-with-thumbs-up-removebg-preview.png"
+              src="https://i.ibb.co/W0hNQ6M/young-people-row-with-thumbs-up.jpg"
               alt=""
             />
           </div>
