@@ -18,7 +18,7 @@ const Banner = () => {
         <figure className="figure-banner">
           <img
             className="banner-img"
-            src="https://o.remove.bg/downloads/12cf9b60-3c61-4f18-9c72-f89a39c03c8c/WhatsApp_Image_2023-05-20_at_23.04.13-removebg-preview.png"
+            src="https://i.ibb.co/QNLq233/Banner-picture.png"
             alt="A young lady sits, holding a pen and a notebook."
           />
         </figure>
