@@ -1,0 +1,71 @@
+.btn {
+  color: hsl(38, 100%, 98%);
+  font-family: 'Poppins', sans-serif;
+  padding: 1.2vw 1.8vw;
+  border-radius: 2vw;
+  transition: 0.2s ease-in-out;
+  font-size: clamp(0.95vw,20vw,12px);
+}
+
+
+.btn-primary {
+  background: hsl(39, 100%, 50%);
+  box-shadow: 5px 10px 30px hsla(39, 100%, 50%, 0.3);
+}
+
+.btn-primary:is(:hover, :focus) {
+  background: hsl(39, 100%, 45%);
+  transform: translateY(-3px);
+}
+
+.banner{
+  background: linear-gradient(
+    90deg,
+    hsl(38, 100%, 98%) 21.32%,
+    hsl(144, 45%, 98%) 130%
+  );
+  padding: 250px 0 120px;
+  
+  display: block;
+  padding-left: 10vw;
+  padding-right: 5vw;
+}
+
+.banner_container{
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  align-items: center;
+  gap: 5vw;
+}
+
+
+.banner-img{
+  width: 35vw;
+  min-width: 220px;
+  margin-left: 3vw;
+}
+
+.banner-content{
+  padding-left: 8vw;
+}
+
+.banner-title{
+  font-weight: 700;
+  /* font-size: 4vw; */
+  font-size: min(4vw,50px);
+  /* font-family: 'Rubik', sans-serif; */
+  /* font-family: 'DM Sans', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1vw;
+  line-height: 1.4;
+}
+
+
+.banner-text{
+  color: gray;
+  margin-bottom: 45px;
+  font-family: 'DM Sans', sans-serif;
+  /* font-size: 1vw; */
+  font-size: clamp(1vw,20vw,12px);
+  line-height: 1.6;
+}
