@@ -1,0 +1,91 @@
+/* Add responsive styles */
+
+
+.about-container{
+  margin: 100px 10px;
+}
+
+/* Update existing styles */
+.row-aboutus {
+  display: flex;
+  align-items: center; /* Added */
+}
+
+.aboutus_img {
+  flex: 0 0 50%; /* Added */
+  padding-right: 20px; /* Added */
+}
+
+.aboutus_text {
+  margin-left: 180px;
+  font-weight: 800;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+.aboutus_text::after {
+  margin-top: 20px;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 100%;
+  height: 10px;
+  background-color: orange;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.aboutus_text1 {
+  color: orange;
+}
+
+.aboutus_text2 {
+  margin-top: 80px;
+  margin-left: 28px;
+  font-size: 1.5em;
+  width: 90%;
+  color: gray;
+  text-align:justify;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.aboutus_btn {
+  margin-left: 25%;
+  margin-top: 50px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+
+
+@media (max-width: 1400px) {
+  .row-aboutus img {
+    display: none;
+  }
+
+  .row-aboutus .aboutus_img {
+    display: none;
+  }
+
+  .aboutus_text {
+    margin-left: 40px;
+    text-align: center;
+  }
+
+  .aboutus_text2 
+  {
+    font-size: 1.5em;
+    color: gray;
+    text-align:justify;
+    width: 90%;
+  }
+
+  .aboutus_btn {
+    margin-left: 40px;
+    margin-top: 30px;
+  }
+}

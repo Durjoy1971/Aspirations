@@ -1,0 +1,136 @@
+body {
+  background: hsl(38, 100%, 98%);
+}
+
+/* #hide-log-in-button, #hide-admin-button,#hide-log-out-button{
+  display: none;
+} */
+
+
+.image_nav {
+  width: 15vw;
+  min-width: 200px;
+  margin-inline: auto;
+}
+
+.navbar {
+  background: linear-gradient(
+    90deg,
+    hsl(38, 100%, 98%) 21.32%,
+    hsl(144, 45%, 98%) 130%
+  );
+  padding-block: 25px;
+  padding-left: 16.8vw;
+  padding-right: 8vw;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: padding 0.3s ease-in-out;
+}
+
+.navbar.active {
+  background: hsl(210, 17%, 98%);
+  box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.1);
+  padding-block: 20px;
+}
+
+.navbar-toggler {
+  background-color: gray;
+  width: 10vw;
+  max-width: 60px;
+}
+
+.navbar-toggler-icon {
+  width: 3vw;
+  
+}
+
+.navbar-nav {
+  padding: 0;
+}
+
+.nav-point {
+  /* font-family: "DM Sans", sans-serif; */
+  font-family: "Rubik", sans-serif;
+  color: rgb(0, 0, 0);
+  position: relative;
+  font-weight: 500;
+  font-size: clamp(1.1vw, 20vw, 15px);
+  text-decoration: none;
+  padding-block: 15px;
+  margin-right: 1.5vw;
+}
+
+
+
+.log-in-link {
+  margin-bottom: 20px;
+  max-width: 100px;
+  font-family: "Poppins", sans-serif;
+  padding: 1.2vw 1.8vw;
+  transition: 0.2s ease-in-out;
+  box-shadow: 5px 10px 30px hsla(39, 100%, 50%, 0.3);
+  border-radius: 1vw;
+}
+
+.log-in-link:is(:hover, :focus) {
+  background: rgb(231, 226, 226);
+  transform: translateY(-3px);
+}
+
+
+.durjoy::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -1px;
+  left: 0%;
+  transform: translateX(0%);
+  background-color: #ffde23;
+  transition: width 0.5s ease 0s, left 0.5s ease 0s;
+}
+
+.durjoy:hover::before {
+  width: 85%;
+  left: 9%;
+}
+
+.nav-point:hover {
+  color: hsl(240, 12%, 34%);
+}
+.go-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: hsl(0, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  color: hsl(0, 0%, 23%);
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.go-top.active {
+  background-color: #ffde23;
+  opacity: 1;
+  visibility: visible;
+}
+
+.go-top:is(:hover, :focus) {
+  color: red;
+  background-color: gray;
+}
+
+
+
