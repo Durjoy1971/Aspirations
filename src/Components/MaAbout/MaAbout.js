@@ -52,18 +52,13 @@ const MaAbout = () => {
           this blog, we'll explore three key features of our website that make
           it a valuable tool for learners of all ages.
         </h5>
-        <h2 className="maabout_text7">Class 1 to 5 Video Lessons:</h2>
+      <h2 className="maabout_text7">Empowering Students:</h2>
         <h5 className="maabout_text8">
-          Our website offers a vast collection of video lessons for students
-          from class 1 to 5 in subjects like math, English, and Bangla. These
-          videos are designed to simplify complex concepts and make learning
-          engaging and interactive. The videos are created by experienced
-          educators and cover a comprehensive range of topics, ensuring that
-          students receive a holistic education.{" "}
+        Empowering Students: Life Guidance and Motivational Insights for Success" is a comprehensive program designed to equip students with the necessary tools and knowledge to navigate their journey through life. Through a series of engaging and thought-provoking videos, we inspire and motivate students by sharing valuable insights on making informed decisions, setting goals, and developing crucial life skills. Our aim is to empower students to make positive choices, embrace personal growth, and unlock their full potential, ultimately leading them towards a successful and fulfilling future
         </h5>
         <img
           className="maabout_img1"
-          src="https://i.ibb.co/2FSQzNR/a644-8ume-220311-removebg-preview.png"
+          src="https://i.ibb.co/GnrYdJW/19198407-removebg-preview.png"
           alt=""
           style={{
             width: 630,
@@ -90,13 +85,26 @@ const MaAbout = () => {
         <h5 className="maabout_text8">
           Our website's kids' corner is a dedicated section for children's
           learning. It offers a range of courses specially designed for young
-          learners, including kid's programming, kids' grammar, and coding
-          courses like beginner CSS and HTML. The courses are designed to be
+          learners, including kid's programming, kids' grammar, and coding courses like beginner CSS and HTML. The courses are designed to be
           interactive and fun, making learning enjoyable for children.
         </h5>
         <img
           className="maabout_img1"
           src="https://i.ibb.co/Y3xFs1N/www.png"
+          alt=""
+          style={{
+            width: 630,
+          }}
+        />
+
+<h2 className="maabout_text7">Blog:</h2>
+        <h5 className="maabout_text8">
+        Insights and Skills for Student Success" is a blog dedicated to providing valuable guidance and practical advice to students as they embark on their career journey. With a focus on essential skills and life lessons, our blog equips students with the knowledge and tools necessary to make informed decisions about their career choices. Whether it's exploring different career paths, honing transferable skills, or understanding the demands of various industries, our blog serves as a trusted resource to help students build a solid foundation for a successful and fulfilling career.
+
+        </h5>
+        <img
+          className="maabout_img1"
+          src="https://i.ibb.co/wWCS03s/3963180-removebg-preview.png"
           alt=""
           style={{
             width: 630,
