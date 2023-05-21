@@ -27,29 +27,6 @@ const UserSideBar = () => {
                 <h2>{state.userName}</h2>
                 </div>
               </div>
-              <ul className="user-sidebar-ul">
-                <li className="user-sidebar-li">
-                  <FontAwesomeIcon
-                    className="user-sidebar-icon"
-                    icon={faClock}
-                  />
-                  <p>Watch Later</p>
-                </li>
-                <li className="user-sidebar-li">
-                  <FontAwesomeIcon
-                    className="user-sidebar-icon"
-                    icon={faIdBadge}
-                  />
-                  <p>Profile</p>
-                </li>
-                <li className="user-sidebar-li">
-                  <FontAwesomeIcon
-                    className="user-sidebar-icon"
-                    icon={faClapperboard}
-                  />
-                  <p>Finished Course</p>
-                </li>
-              </ul>
             </div>
           </div>
         </>
