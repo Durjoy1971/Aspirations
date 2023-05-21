@@ -1,0 +1,36 @@
+.cfa {
+  background-color: hsl(240, 8%, 18%);
+  display: grid;
+  grid-template-columns: 5.5fr 5fr;
+  padding-left: 17vw;
+  position: relative;
+}
+
+.cfa-container {
+  margin-top: 1.2vw;
+  margin-bottom: 1.5vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  align-items: center;
+}
+
+.cfa-img-div {
+  position: absolute; /* add position absolute to the image container */
+  bottom: 0; /* position the image at the bottom of the parent container */
+  right: 0; 
+  margin-right: 13vw;
+}
+
+.cfa-image {
+  width: 18vw;
+}
+
+.de_cfa_title {
+  color: white;
+  font-weight: 600;
+  font-size: 2.4vw;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.8;
+}
+
