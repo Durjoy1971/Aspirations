@@ -1,12 +1,6 @@
 import React, { useContext } from "react";
 import "./UserSideBar.css";
 import { UserContext } from "../../App";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faClapperboard,
-  faClock,
-  faIdBadge,
-} from "@fortawesome/free-solid-svg-icons";
 
 const UserSideBar = () => {
   const { state} = useContext(UserContext);
