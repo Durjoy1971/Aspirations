@@ -89,7 +89,7 @@ const AddKidsCorner = () => {
         <div className="Update-Upper">
           <img
             className="Up-Image"
-            src="https://i.ibb.co/DGdxfqh/AddSkill.png"
+            src="https://i.ibb.co/dggGr0T/Update-Section.jpg"
             alt="React Bootstrap logo"
           />
         </div>
