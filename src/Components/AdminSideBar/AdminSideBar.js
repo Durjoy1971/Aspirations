@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./AdminSideBar.css";
 import { UserContext } from "../../App";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faToolbox } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const AdminSideBar = () => {
@@ -26,8 +26,8 @@ const AdminSideBar = () => {
               </div>
               <ul className="sidebar-ul">
                 <li className="sidebar-li">
-                  <FontAwesomeIcon className="sidebar-icon" icon={faToolbox} />
-                  <p>Update</p>
+                  <FontAwesomeIcon className="sidebar-icon" icon={faTrashCan} />
+                  <p>Delete</p>
                 </li>
                 <Link to="/add">
                   <li className="sidebar-li">
