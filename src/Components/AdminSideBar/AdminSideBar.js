@@ -25,10 +25,12 @@ const AdminSideBar = () => {
                 </div>
               </div>
               <ul className="sidebar-ul">
+                <Link to="/update-delete">
                 <li className="sidebar-li">
                   <FontAwesomeIcon className="sidebar-icon" icon={faTrashCan} />
                   <p>Delete</p>
                 </li>
+                </Link>
                 <Link to="/add">
                   <li className="sidebar-li">
                     <FontAwesomeIcon className="sidebar-icon" icon={faPlus} />
