@@ -25,6 +25,7 @@ const KidCorner = () => {
       );
       const querySnapshot = await getDocs(skillQuery);
       const coursesData = querySnapshot.docs.map((doc) => doc.data());
+      console.log(coursesData);
       setCourses(coursesData);
     } catch (error) {
       console.error("Error fetching courses: ", error);
@@ -33,6 +34,7 @@ const KidCorner = () => {
 
   const handleViewCoursesClick = async (event, query) => {
     event.preventDefault();
+    console.log("Kids Corner " + query);
     if (state.isLoggedIn === true) {
       const response = await searchYoutube(query);
       navigate("/skills-video-list", { state: { videos: response } });
@@ -56,7 +58,7 @@ const KidCorner = () => {
               </p>
               <button
                 className="kid-corner-card-button"
-                onClick={(e) => handleViewCoursesClick(e, course.keywordsValue)}
+                onClick={(e) => handleViewCoursesClick(e, course.keywordValue)}
               >
                 View Videos
               </button>
