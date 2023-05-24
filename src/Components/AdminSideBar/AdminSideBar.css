@@ -119,7 +119,7 @@
 
 /* For Chrome, Safari, and Opera */
 ::-webkit-scrollbar {
-  width: 17px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
