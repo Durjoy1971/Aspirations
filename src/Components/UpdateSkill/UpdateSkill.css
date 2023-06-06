@@ -1,0 +1,54 @@
+.update-skill-container {
+    padding: 160px 120px 80px;
+  }
+  
+  .skills-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .skills-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .skills-card-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .skills-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .skills-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .skills-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    gap: 90px;
+  }
+  
+  .delete-button,
+  .edit-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-button {
+    background-color: red;
+    color: white;
+  }

@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar-container {
+  position: relative;
+}
+
+.sidebar-nav {
+  width: 90px;
+  position: fixed;
+  top: 130px;
+  right: 0;
+  padding: 40px 15px;
+  /* background: linear-gradient(90deg, #f5a623 21.32%, #f55c47 130%); */
+  background: linear-gradient(90deg, #3a3fdb 21.32%, #00c9a7 130%);
+  /* background: linear-gradient(90deg, #f8e71c 21.32%, #8b572a 130%); */
+  opacity: 0.9;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: width 0.5s;
+  z-index: 100000;
+  color: gold;
+}
+
+.sidebar-user-details {
+  display: none;
+}
+
+.sidebar-user {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  border-radius: 8px;
+  margin: auto;
+  padding: 5px 0px;
+}
+
+.sidebar-user-img {
+  width: 100%;
+  border-radius: 50%;
+  justify-items: center;
+  align-items: center;
+}
+
+.sidebar-user h2 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.sidebar-ul {
+  list-style: none;
+  margin: auto;
+}
+
+.sidebar-li {
+  color: yellow;
+  margin: 30px 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.sidebar-icon{
+  font-size: 25px;
+  color:yellow;
+  margin: 5px;
+}
+
+.sidebar-li p {
+  font-size: larger;
+  font-weight: 500;
+  margin:auto 0px;
+  white-space: nowrap;
+  display: none;
+}
+
+.sidebar-nav:hover {
+  width: 220px;
+}
+
+.sidebar-nav:hover .sidebar-user {
+  width: 90%;
+  background: rgba(201, 200, 191, 0.678);
+  backdrop-filter: blur(5px);
+}
+
+.sidebar-nav:hover .sidebar-user-details {
+  display: block;
+}
+
+.sidebar-nav:hover .sidebar-user-img {
+  margin: 0px;
+  width: 100%;
+}
+
+.sidebar-nav:hover .sidebar-li p {
+  display: block;
+}
+
+.sidebar-nav:hover .sidebar-icon {
+  margin-right: 10px;
+}
+
+.sidebar-nav:hover .sidebar-icon {
+  justify-content: flex-start;
+}
+
+
+/* For Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #f8e71c 21.32%, #8b572a 130%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(270deg, #f8e71c 21.32%, #8b572a 130%);
+}

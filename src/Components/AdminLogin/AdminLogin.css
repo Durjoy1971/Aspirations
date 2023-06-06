@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.admin-body {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vw;
+  /* background: darkcyan; */
+}
+
+.container-admin {
+  /* background-color: bisque; */
+  width: 256px;
+  height: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-admin span {
+  position: absolute;
+  left: 18px;
+  width: 32px;
+  height: 6px;
+  background: darkcyan;
+  border-radius: 8px;
+  transform: scale(2.2) rotate(calc(var(--i) * (360deg / 50)));
+  transform-origin: 128px;
+  animation: animateBlink 3s linear infinite;
+  animation-delay: calc(var(--i) * (3s / 50));
+}
+
+@keyframes animateBlink {
+  33% {
+    background-color: yellow;
+  }
+  66% {
+    background-color: red;
+  }
+}
+
+.admin-span {
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 6px;
+  background-color: gold;
+  border-radius: 8px;
+}
+
+.admin-login-box {
+  position: absolute;
+  width: 400px;
+  /* background-color: aquamarine; */
+  /* background: darkcyan; */
+}
+
+.admin-login-box form {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.admin-h2 {
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  font-size: 30px;
+}
+
+.input-box-admin {
+  position: relative;
+  margin: 25px 0;
+}
+
+.input-box-admin input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: 2.5px solid darkviolet;
+  outline: none;
+  border-radius: 40px;
+  font-size: 20px;
+  color: rebeccapurple;
+  padding: 0 20px;
+  transition: 0.5s ease;
+}
+
+.input-box-admin input:focus,
+.input-box-admin input:valid {
+  border-color: darkgoldenrod;
+}
+
+.input-box-admin label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: rgb(7, 23, 253);
+  font-weight: bold;
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+
+.input-box-admin input:focus ~ label,
+.input-box-admin input:valid ~ label {
+  top: 1px;
+  font-size: 18px;
+  background: darkcyan;
+  padding: 0 6px;
+  color: gold;
+}
+
+.btn-admin {
+  width: 100%;
+  height: 45px;
+  background: rgb(2, 235, 252);
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+}

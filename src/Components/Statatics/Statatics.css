@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&display=swap');
+
+.stats-section {
+    background-color: white;
+    padding: 20px 0 100px;
+  }
+  
+  .stats-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .stats-card {
+    text-align: center;
+    padding: 30px;
+    margin: 20px;
+    width: 250px;
+    height: 180px;
+    border-radius: 20px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'League Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .stats-card.card-1 {
+    /* background-color: #0077c0; */
+    background-color: hsl(170, 75%, 41%, 0.2);
+  }
+  
+  .stats-card.card-2 {
+    /* background-color: #f57f17; */
+    background-color: hsl(351, 83%, 61%,0.3);
+  }
+  
+  .stats-card.card-3 {
+    /* background-color: #4caf50; */
+    background-color: hsl(260, 100%, 67%,0.3);
+  }
+  
+  .stats-card.card-4 {
+    /* background-color: #d32f2f; */
+    background-color: hsl(42, 94%, 55%,0.25);
+  }
+  
+  .stats-card-title-1 {
+    color: hsl(170, 75%, 41%);
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.1;
+  }
+  
+  .stats-card-text {
+    color: black;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+  
+  .stats-card-title-2 {
+    color: hsl(351, 83%, 61%);
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.1;
+  }
+  
+
+  
+  .stats-card-title-3 {
+    color: hsl(260, 100%, 67%);
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.1;
+  }
+  
+
+  
+  .stats-card-title-4 {
+    color: hsl(42, 94%, 55%);
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.1;
+  }
