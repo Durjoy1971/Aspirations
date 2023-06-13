@@ -18,7 +18,7 @@ const Banner = () => {
         <figure className="figure-banner">
           <img
             className="banner-img"
-            src="https://i.ibb.co/QNLq233/Banner-picture.png"
+            src="https://i.ibb.co/Wp9k0Bq/Banner-picture.png"
             alt="A young lady sits, holding a pen and a notebook."
           />
         </figure>

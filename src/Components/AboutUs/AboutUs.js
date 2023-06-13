@@ -17,7 +17,7 @@ const AboutUs = () => {
         <div className="row-aboutus">
           <div>
             <img
-              src="https://i.ibb.co/0m9N6MY/About-Us.png"
+              src="https://i.ibb.co/KD0hZWs/About-Us.png"
               alt=""
             />
           </div>

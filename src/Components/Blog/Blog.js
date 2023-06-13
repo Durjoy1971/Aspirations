@@ -42,7 +42,7 @@ const Blog = () => {
       <Container className="blog_container_img">
         <img
           className="blog_banner_img"
-          src="https://i.ibb.co/LQwjtHb/Blogging-removebg-preview.png"
+          src="https://i.ibb.co/smxrbMy/Blogging-removebg-preview.png"
           alt=""
         />
       </Container>
@@ -51,7 +51,7 @@ const Blog = () => {
           <div className="blog_card">
             <img
               className="blog_img"
-              src="https://i.ibb.co/cbbGZc8/pquy-9o2w-220905.jpg"
+              src="https://i.ibb.co/ZmStb5s/1.jpg"
               alt=""
             />
             <button className="blog_btn">
@@ -65,7 +65,7 @@ const Blog = () => {
           <div className="blog_card">
             <img
               className="blog_img"
-              src="https://i.ibb.co/k9gL8gr/18140.jpg"
+              src=" https://i.ibb.co/C9f9Jfb/1.jpg"
               alt=""
             />
             <button className="blog_btn">
@@ -79,7 +79,7 @@ const Blog = () => {
           <div className="blog_card">
             <img
               className="blog_img"
-              src="https://i.ibb.co/8j3KLdB/4380747.jpg"
+              src="https://i.ibb.co/m8f8hqJ/1.jpg"
               alt=""
             />
             <button className="blog_btn">
@@ -93,7 +93,7 @@ const Blog = () => {
           <div className="blog_card">
             <img
               className="blog_img"
-              src="https://i.ibb.co/hymHfDH/4428861.jpg"
+              src="https://i.ibb.co/rycm16G/19198999.jpg"
               alt=""
             />
             <button className="blog_btn">
@@ -107,7 +107,7 @@ const Blog = () => {
           <div className="blog_card">
             <img
               className="blog_img"
-              src="https://i.ibb.co/ky2LFJ2/close-up-old-retro-things-shooted-with-vintage-style-colors-155003-38265.jpg"
+              src="https://i.ibb.co/Bj5TyTh/1.jpg"
               alt=""
             />
             <button className="blog_btn">
@@ -123,7 +123,7 @@ const Blog = () => {
           <div className="blog_card">
             <img
               className="blog_img"
-              src="https://i.ibb.co/ftgK8GM/splash-colorful-paints-happiness-abstraction-generative-ai-74760-4847.jpg"
+              src="https://i.ibb.co/kyDchDr/1.jpg"
               alt=""
             />
             <button className="blog_btn">
@@ -143,7 +143,7 @@ const Blog = () => {
       <div className="blog_main_card">
         <img
           className="blog_main_img"
-          src="https://i.ibb.co/vzNKwY7/3785210.jpg"
+          src="https://i.ibb.co/Tc5j1Tk/1.jpg"
           alt=""
         />
         <h4 className="blog_main_text">
@@ -172,7 +172,7 @@ const Blog = () => {
       <div className="blog_main_card">
         <img
           className="blog_main_img"
-          src="https://i.ibb.co/Mf4f4sY/young-boy-studying-front-computer-1308-79636-1.jpg"
+          src="https://i.ibb.co/bP74jdm/1.jpg"
           alt=""
         />
         <h4 className="blog_main_text">
@@ -200,7 +200,7 @@ const Blog = () => {
       <div className="blog_main_card">
         <img
           className="blog_main_img"
-          src="https://i.ibb.co/9ZCwmzQ/31989.jpg"
+          src="https://i.ibb.co/pbXmkdr/1.jpg"
           alt=""
         />
         <h4 className="blog_main_text">

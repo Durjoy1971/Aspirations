@@ -30,7 +30,7 @@ const Blog1 = () => {
         </div>
         <div id="flexi_blog1_1">
           <img
-            src="https://i.ibb.co/xHfrZp8/blog.jpg"
+            src="https://i.ibb.co/m8ZppcR/2.jpg"
             alt=""
             style={{ minWidth: 100, maxWidth: 1300 }}
           />
@@ -62,7 +62,7 @@ const Blog1 = () => {
           </p>
           <img
             className="blog1_img1"
-            src="https://i.ibb.co/L0mLHnV/blog.jpg"
+            src="https://i.ibb.co/2v2ZB2K/3.jpg"
             alt=""
             style={{
               height: 510,
@@ -82,7 +82,7 @@ const Blog1 = () => {
           </p>
           <img
             className="blog1_img2"
-            src="https://i.ibb.co/LQXqFj4/blg-final.png"
+            src="https://i.ibb.co/nrQZkZB/4.png"
             alt=""
             style={{
               height: 510,
@@ -101,7 +101,7 @@ const Blog1 = () => {
           </p>
           <img
             className="blog1_img3"
-            src="https://i.ibb.co/6n6fMLJ/blog.jpg"
+            src="https://i.ibb.co/SVvvCcM/5.jpg"
             alt=""
             style={{
               height: 510,
@@ -118,7 +118,7 @@ const Blog1 = () => {
           </p>
           <img
             className="blog1_img4"
-            src="https://i.ibb.co/B3YrW2h/blog.jpg"
+            src="https://i.ibb.co/mDb8D6B/6.jpg"
             alt=""
             style={{
               height: 510,
