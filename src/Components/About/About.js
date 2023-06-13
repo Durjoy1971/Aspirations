@@ -9,7 +9,7 @@ const About = () => {
         <div className="de_about_content">
           <img
             className="about-img"
-            src="https://i.ibb.co/JkRtJDz/about-banner.png://i.ibb.co/QbhS3jc/book.png"
+            src="https://i.ibb.co/DGLmFxP/about-banner.png"
             alt="about-banner"
           />
         </div>
