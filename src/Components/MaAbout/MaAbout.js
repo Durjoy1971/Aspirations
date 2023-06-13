@@ -21,7 +21,9 @@ const MaAbout = () => {
             </h1>
             <h4 className="maabout_text3">Online Courses</h4>
             <p className="maabout_text4">
-              We provide you free online courses with high-quality video content.Which is a great way to o learn new skills without having to search for the best videos by yourselves
+              We provide you free online courses with high-quality video
+              content.Which is a great way to o learn new skills without having
+              to search for the best videos by yourselves
             </p>
             {/* <p className="maabout_icon">
               <SiGmail size={30} /> <AiFillFacebook size={30} />
@@ -49,24 +51,7 @@ const MaAbout = () => {
           skill-building courses, and a dedicated section for kids' learning. In
           this blog, we'll explore three key features of our website that make
           it a valuable tool for learners of all ages.
-        </h5>
-        <h2 className="maabout_text7">Class 1 to 5 Video Lessons:</h2>
-        <h5 className="maabout_text8">
-          Our website offers a vast collection of video lessons for students
-          from class 1 to 5 in subjects like math, English, and Bangla. These
-          videos are designed to simplify complex concepts and make learning
-          engaging and interactive. The videos are created by experienced
-          educators and cover a comprehensive range of topics, ensuring that
-          students receive a holistic education.{" "}
-        </h5>
-        <img
-          className="maabout_img1"
-          src="https://i.ibb.co/2FSQzNR/a644-8ume-220311-removebg-preview.png"
-          alt=""
-          style={{
-            width: 630,
-          }}
-        />
+        </h5>        
         <h2 className="maabout_text7">Skill-Building Courses:</h2>
         <h5 className="maabout_text8">
           Our website's skill-building section is a treasure trove of courses
@@ -95,6 +80,26 @@ const MaAbout = () => {
         <img
           className="maabout_img1"
           src="https://i.ibb.co/Y3xFs1N/www.png"
+          alt=""
+          style={{
+            width: 630,
+          }}
+        />
+        <h2 className="maabout_text7">Blog:</h2>
+        <h5 className="maabout_text8">
+          Insights and Skills for Student Success" is a blog dedicated to
+          providing valuable guidance and practical advice to students as they
+          embark on their career journey. With a focus on essential skills and
+          life lessons, our blog equips students with the knowledge and tools
+          necessary to make informed decisions about their career choices.
+          Whether it's exploring different career paths, honing transferable
+          skills, or understanding the demands of various industries, our blog
+          serves as a trusted resource to help students build a solid foundation
+          for a successful and fulfilling career.
+        </h5>
+        <img
+          className="maabout_img1"
+          src="https://i.ibb.co/wWCS03s/3963180-removebg-preview.png"
           alt=""
           style={{
             width: 630,
@@ -148,7 +153,8 @@ const MaAbout = () => {
               <p className="dev_role">FullStack Developer</p>
               <p className="dev_intro">
                 Passionate competitive programmer and full-stack web developer,
-                dedicated to coding and love to create visually stunning, user-friendly and dynamic websites.
+                dedicated to coding and love to create visually stunning,
+                user-friendly and dynamic websites.
               </p>
             </div>
           </div>
