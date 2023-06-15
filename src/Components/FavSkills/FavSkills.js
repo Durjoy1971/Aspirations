@@ -57,7 +57,7 @@ const FavSkills = () => {
 
               <h3 className="fav-card-title">HTML Tutorial For Beginners</h3>
 
-              <p className="card-text">
+              <p className="fav-card-text">
                 Here you will learn the html concepts with examples from
                 scratch.
               </p>
