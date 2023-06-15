@@ -27,7 +27,7 @@ const UserSideBar = () => {
                 <h2>{state.userName}</h2>
                 </div>
               </div>
-              <ul className="user-sidebar-ul">
+              {/* <ul className="user-sidebar-ul">
                 <li className="user-sidebar-li">
                   <FontAwesomeIcon
                     className="user-sidebar-icon"
@@ -49,7 +49,7 @@ const UserSideBar = () => {
                   />
                   <p>Finished Course</p>
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </>
