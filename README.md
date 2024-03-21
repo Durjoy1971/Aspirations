@@ -1,5 +1,26 @@
-Aspiration is a web-based platform that allows users to watch videos on specific topics divided into sections such as Skills and Kid-Corners. Additionally, users can access blogs on various topics. It utilizes React for the frontend, Firebase for the backend, and the YouTube API for video integration.
+# Aspiration
 
+## About
+
+Aspiration is a web-based platform developed as the Final Term Project of CSE-3640 (Software Development 2 Lab). It provides users with access to videos on specific topics divided into sections such as Skills and Kid-Corners. Additionally, users can explore blogs covering various topics.
+
+## Features
+
+- Watch videos on specific topics categorized into sections like Skills and Kid-Corners.
+- Access blogs covering various topics of interest.
+- Utilizes React for the frontend, Firebase for the backend, and the YouTube API for video integration.
+
+## Technologies Used
+
+- React.js
+- Tailwind CSS
+- Firebase
+
+## Demo
+
+Check out the live demo [here](https://aspirations.netlify.app/home).
+
+## Screenshots
 
 ![image](https://github.com/Durjoy1971/Aspirations/assets/91456847/8959e038-b0f4-4a37-a718-b780ece6ea46)
 ![image](https://github.com/Durjoy1971/Aspirations/assets/91456847/f069da87-e2a6-4baa-b3a0-28fd9c012258)
