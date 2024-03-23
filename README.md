@@ -13,7 +13,6 @@ Aspiration is a web-based platform developed as the Final Term Project of CSE-36
 ## Technologies Used
 
 - React.js
-- Tailwind CSS
 - Firebase
 
 ## Demo
