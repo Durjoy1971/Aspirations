@@ -34,7 +34,7 @@ const FavSkills = () => {
               <h3 className="fav-card-title">C Language Tutorial</h3>
 
               <p className="fav-card-text">
-                You will lear the basic concept of C
+                You will learn about the basic concept of C with examples.
               </p>
 
               <Nav.Link className="fav-card-link" as={Link} to="/skills">
