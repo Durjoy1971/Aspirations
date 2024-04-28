@@ -17,7 +17,7 @@ const LogIn = () => {
       document.title = "Login | Aspiration";
     };
   }, []);
-  
+
   const { state, dispatch } = useContext(UserContext);
 
   console.log(state);
@@ -48,12 +48,10 @@ const LogIn = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         if (userCredential.user.emailVerified) {
-          console.log("Logged in successfully");
+          //console.log("Logged in successfully");
           alert("Sign In Successfull");
           document.querySelector(".login_username_data").value = "";
           document.querySelector(".login_username_password").value = "";
-          // window.location.href = "/home";
-          // toggleButtons(email);
           dispatch({
             type: "LOGIN",
             payload: {
@@ -61,7 +59,7 @@ const LogIn = () => {
               email: userCredential.user.email,
             },
           });
-          console.log(userCredential.user.displayName);
+          //console.log(userCredential.user.displayName);
           navigate("/home");
         } else {
           alert("Please verify your email before logging in.");
@@ -82,13 +80,9 @@ const LogIn = () => {
         const user = userCredential.user;
         updateProfile(user, {
           displayName: username,
-        })
-          .then(() => {
-            console.log("Username stored successfully");
-          })
-          .catch((error) => {
-            console.log(error);
-          });
+        }).catch((error) => {
+          console.log(error);
+        });
 
         sendEmailVerification(user)
           .then(() => {

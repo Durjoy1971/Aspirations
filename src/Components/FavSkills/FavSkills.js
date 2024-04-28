@@ -25,16 +25,16 @@ const FavSkills = () => {
               <Nav.Link className="fav-card-banner" as={Link} to="/skills">
                 <figure>
                   <img
-                    src="https://i.ytimg.com/vi/BjZXRs6fAkA/hq720.jpg"
+                    src="https://i.ytimg.com/vi/irqbmMNs2Bo/hq720.jpg"
                     alt="JBV"
                   />
                 </figure>
               </Nav.Link>
 
-              <h3 className="fav-card-title">Leadership Development</h3>
+              <h3 className="fav-card-title">C Language Tutorial</h3>
 
               <p className="fav-card-text">
-                Leadership Expert and Author of "Start With Why"
+                You will lear the basic concept of C
               </p>
 
               <Nav.Link className="fav-card-link" as={Link} to="/skills">
