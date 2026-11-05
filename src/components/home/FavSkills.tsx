@@ -103,3 +103,4 @@ const FavSkills: React.FC = () => {
 };
 
 export default FavSkills;
+

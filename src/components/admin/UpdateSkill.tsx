@@ -96,3 +96,4 @@ const UpdateSkill: React.FC = () => {
 };
 
 export default UpdateSkill;
+

@@ -174,3 +174,4 @@ const AddSkill: React.FC = () => {
 };
 
 export default AddSkill;
+
