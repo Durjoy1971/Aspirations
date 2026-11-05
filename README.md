@@ -1,29 +1,36 @@
-# Aspiration
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## About
+## Getting Started
 
-Aspiration is a web-based platform developed as the Final Term Project of CSE-3640 (Software Development 2 Lab). It provides users with access to videos on specific topics divided into sections such as Skills and Kid-Corners. Additionally, users can explore blogs covering various topics.
+First, run the development server:
 
-## Features
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- Watch videos on specific topics categorized into sections like Skills and Kid-Corners.
-- Access blogs covering various topics of interest.
-- Utilizes React for the frontend, Firebase for the backend, and the YouTube API for video integration.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Technologies Used
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- React.js
-- Firebase
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Demo
+## Learn More
 
-Check out the live demo [here](https://aspirations.netlify.app/home).
+To learn more about Next.js, take a look at the following resources:
 
-## Screenshots
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-![image](https://github.com/Durjoy1971/Aspirations/assets/91456847/8959e038-b0f4-4a37-a718-b780ece6ea46)
-![image](https://github.com/Durjoy1971/Aspirations/assets/91456847/f069da87-e2a6-4baa-b3a0-28fd9c012258)
-![image](https://github.com/Durjoy1971/Aspirations/assets/91456847/316581d4-787a-4847-837e-bb05fe3f4170)
-![image](https://github.com/Durjoy1971/Aspirations/assets/91456847/50070df6-15d1-4d68-8d8f-4a7720f8770e)
-![image](https://github.com/Durjoy1971/Aspirations/assets/91456847/665290e5-a329-4a78-b598-adab17627353)
-![image](https://github.com/Durjoy1971/Aspirations/assets/91456847/388f9d3e-e97d-4d0a-97a2-0e66baf10abd)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
