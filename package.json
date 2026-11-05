@@ -9,9 +9,18 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "@fortawesome/react-fontawesome": "^3.5.0",
+    "@types/react-slick": "^0.23.13",
+    "firebase": "^13.2.0",
     "next": "16.4.5",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "react-slick": "^0.31.0",
+    "react-youtube": "^10.1.0",
+    "slick-carousel": "^2.0.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
