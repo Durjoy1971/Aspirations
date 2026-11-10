@@ -11,6 +11,7 @@ import {
   getDocs,
 } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { toast } from "sonner";
 
 const AddKidsCorner: React.FC = () => {
   const imageRef = useRef<HTMLInputElement>(null);
@@ -64,7 +65,7 @@ const AddKidsCorner: React.FC = () => {
       };
 
       await addDoc(collection(db, "kidList"), newSkill);
-      alert("Course Added Successfully In Kid's Corner");
+      toast.success("Kids Corner item added successfully!");
 
       if (imageRef.current) imageRef.current.value = "";
       if (titleRef.current) titleRef.current.value = "";
@@ -72,9 +73,9 @@ const AddKidsCorner: React.FC = () => {
       if (keywordRef.current) keywordRef.current.value = "";
 
       fetchHighestId();
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error adding course: ", error);
-      alert("Failed to add course");
+      toast.error("Error adding item: " + (error?.message || ""));
     }
   };
 

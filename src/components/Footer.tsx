@@ -6,6 +6,7 @@ import {
   faLinkedinIn,
   faYoutube,
   faTwitter,
+  faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 
@@ -54,14 +55,12 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://github.com/Durjoy1971"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="#reviews"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   Reviews
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
@@ -81,44 +80,36 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-[10px] p-0 list-none">
               <li>
-                <a
-                  href="https://github.com/Durjoy1971"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/aboutus"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   Career
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://github.com/Durjoy1971"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="#privacy"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   Privacy policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://github.com/Durjoy1971"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="#refund"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   Refund policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://github.com/Durjoy1971"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="#payment"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   payment options
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -138,44 +129,36 @@ const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="https://github.com/Durjoy1971"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/kids"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   Book Store
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://github.com/Durjoy1971"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/skills"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   Notes and Guides
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://github.com/Durjoy1971"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="#offers"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   Offers
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="https://github.com/Durjoy1971"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/skills"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   Crash Courses
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -187,28 +170,40 @@ const Footer: React.FC = () => {
             </h4>
             <div className="flex gap-3">
               <a
-                href="https://www.facebook.com/profile.php?id=100005243536152"
+                href="https://www.linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
                 className="w-[45px] h-[45px] bg-white/20 rounded-full flex items-center justify-center text-white transition-all duration-700 hover:bg-white hover:text-black hover:scale-110 hover:shadow-[0_0_25px_white]"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
               <a
-                href="https://t.me/Durjoy_Barua"
+                href="https://www.youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="YouTube"
                 className="w-[45px] h-[45px] bg-white/20 rounded-full flex items-center justify-center text-white transition-all duration-700 hover:bg-white hover:text-black hover:scale-110 hover:shadow-[0_0_25px_white]"
               >
                 <FontAwesomeIcon icon={faYoutube} />
               </a>
               <a
-                href="https://t.me/Durjoy_Barua"
+                href="https://www.twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Twitter"
                 className="w-[45px] h-[45px] bg-white/20 rounded-full flex items-center justify-center text-white transition-all duration-700 hover:bg-white hover:text-black hover:scale-110 hover:shadow-[0_0_25px_white]"
               >
                 <FontAwesomeIcon icon={faTwitter} />
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="w-[45px] h-[45px] bg-white/20 rounded-full flex items-center justify-center text-white transition-all duration-700 hover:bg-white hover:text-black hover:scale-110 hover:shadow-[0_0_25px_white]"
+              >
+                <FontAwesomeIcon icon={faGithub} />
               </a>
             </div>
           </div>

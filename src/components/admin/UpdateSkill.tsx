@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { collection, getDocs, deleteDoc, doc, query, orderBy } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { toast } from "sonner";
 
 interface SkillItemWithId {
   id: string;
@@ -44,11 +45,11 @@ const UpdateSkill: React.FC = () => {
     if (!confirm("Are you sure you want to delete this skill?")) return;
     try {
       await deleteDoc(doc(db, "SkillList", id));
-      alert("Skill deleted successfully");
+      toast.success("Skill deleted successfully!");
       fetchSkills();
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error deleting skill: ", error);
-      alert("Failed to delete skill");
+      toast.error("Error deleting skill: " + (error?.message || ""));
     }
   };
 

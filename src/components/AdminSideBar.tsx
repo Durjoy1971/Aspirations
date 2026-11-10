@@ -10,12 +10,13 @@ import { faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 const AdminSideBar: React.FC = () => {
   const { state } = useContext(UserContext);
 
-  if (!state || state.email !== "durjoybarua1971@gmail.com") {
+  const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || "durjoybarua1971@gmail.com";
+  if (!state || state.email !== adminEmail) {
     return null;
   }
 
   return (
-    <div className="relative z-[99999]">
+    <aside aria-label="Admin sidebar" className="hidden md:block relative z-[99999]">
       <div
         className="group fixed top-[130px] right-0 w-[90px] hover:w-[220px] py-[40px] px-[15px] flex flex-col justify-between items-center transition-all duration-500 rounded-l-2xl shadow-xl overflow-hidden text-yellow-300"
         style={{
@@ -64,7 +65,7 @@ const AdminSideBar: React.FC = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </aside>
   );
 };
 

@@ -16,16 +16,10 @@ const About: React.FC = () => {
           />
         </div>
         <div className="mr-0 md:mr-[9vw]">
-          <h1
-            className="font-bold text-[clamp(2.5vw,20vw,14px)] mb-[1vw] leading-[1.6] text-black"
-            style={{ fontFamily: "var(--font-poppins)" }}
-          >
+          <h1 className="font-bold text-[clamp(2.5vw,20vw,14px)] mb-[1vw] leading-[1.6] text-black">
             We Help to Create Possibility & Success in Your Career!
           </h1>
-          <p
-            className="text-gray-500 mb-[45px] text-[clamp(1.1vw,20vw,10px)] leading-[1.6]"
-            style={{ fontFamily: "var(--font-dm-sans)" }}
-          >
+          <p className="text-gray-500 mb-[45px] text-[clamp(1.1vw,20vw,10px)] leading-[1.6]">
             Discover your potential and achieve career success with our tailored services.
             Our team of experts provides resume writing, interview coaching, and
             personalized career development plans. Let us guide you towards unlocking new

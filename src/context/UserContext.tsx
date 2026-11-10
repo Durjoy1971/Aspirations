@@ -1,11 +1,12 @@
 "use client";
 
-import React, { createContext, useReducer, useEffect, ReactNode, useContext, Dispatch } from "react";
+import React, { createContext, useReducer, useEffect, useMemo, ReactNode, useContext, Dispatch } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 
 export interface UserState {
   isLoggedIn: boolean;
+  isLoading: boolean;
   userName: string;
   email: string;
 }
@@ -16,6 +17,7 @@ export type UserAction =
 
 export const initialState: UserState = {
   isLoggedIn: false,
+  isLoading: true,
   userName: "",
   email: "",
 };
@@ -23,17 +25,18 @@ export const initialState: UserState = {
 export const reducer = (state: UserState, action: UserAction): UserState => {
   if (action.type === "LOGIN") {
     if (typeof action.payload === "string") {
-      return { ...state, isLoggedIn: true, userName: action.payload };
+      return { ...state, isLoggedIn: true, isLoading: false, userName: action.payload };
     }
     const { userName, email } = action.payload || {};
     return {
       ...state,
       isLoggedIn: true,
+      isLoading: false,
       userName: userName || state.userName || "",
       email: email || state.email || "",
     };
   } else if (action.type === "LOGOUT") {
-    return { ...state, isLoggedIn: false, userName: "", email: "" };
+    return { ...state, isLoggedIn: false, isLoading: false, userName: "", email: "" };
   }
   return state;
 };
@@ -54,7 +57,10 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        if (user.emailVerified || user.email === "durjoybarua1971@gmail.com") {
+        if (
+          user.emailVerified ||
+          user.email === (process.env.NEXT_PUBLIC_ADMIN_EMAIL || "durjoybarua1971@gmail.com")
+        ) {
           dispatch({
             type: "LOGIN",
             payload: {
@@ -73,8 +79,10 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     return () => unsubscribe();
   }, []);
 
+  const value = useMemo(() => ({ state, dispatch }), [state]);
+
   return (
-    <UserContext.Provider value={{ state, dispatch }}>
+    <UserContext.Provider value={value}>
       {children}
     </UserContext.Provider>
   );

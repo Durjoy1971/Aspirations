@@ -23,11 +23,11 @@ const stats = [
     value: "200+",
     label: "Top Instructors",
     bg: "hsla(42, 94%, 55%, 0.25)",
-    color: "hsl(42, 94%, 55%)",
+    color: "#854d0e",
   },
 ];
 
-const Statatics: React.FC = () => {
+const Statistics: React.FC = () => {
   return (
     <section className="bg-white py-[20px] pb-[100px]" aria-label="stats">
       <div className="max-w-[1400px] mx-auto flex justify-center flex-wrap gap-4">
@@ -37,7 +37,6 @@ const Statatics: React.FC = () => {
             className="w-[250px] h-[180px] rounded-[20px] p-[30px] m-[10px] text-center flex flex-col justify-center items-center shadow-sm"
             style={{
               backgroundColor: stat.bg,
-              fontFamily: "var(--font-league-spartan)",
             }}
           >
             <h3
@@ -56,5 +55,5 @@ const Statatics: React.FC = () => {
   );
 };
 
-export default Statatics;
+export default Statistics;
 

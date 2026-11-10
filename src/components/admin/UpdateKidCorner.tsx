@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { collection, getDocs, deleteDoc, doc, query, orderBy } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { toast } from "sonner";
 
 interface KidItemWithId {
   id: string;
@@ -45,11 +46,11 @@ const UpdateKidCorner: React.FC = () => {
     if (!confirm("Are you sure you want to delete this course from Kid's Corner?")) return;
     try {
       await deleteDoc(doc(db, "kidList", id));
-      alert("Video deleted successfully from Kid's Corner");
+      toast.success("Item deleted successfully!");
       fetchSkills();
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error deleting skill: ", error);
-      alert("Failed to delete course");
+      toast.error("Error deleting item: " + (error?.message || ""));
     }
   };
 

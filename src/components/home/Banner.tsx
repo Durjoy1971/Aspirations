@@ -13,16 +13,10 @@ const Banner: React.FC = () => {
     >
       <div className="grid grid-cols-1 md:grid-cols-[4fr_6fr] items-center gap-[5vw]">
         <div className="pl-0 md:pl-[8vw]">
-          <h1
-            className="font-bold text-[min(4vw,50px)] text-black mb-[1vw] leading-[1.4]"
-            style={{ fontFamily: "var(--font-poppins)" }}
-          >
+          <h1 className="font-bold text-[min(4vw,50px)] text-black mb-[1vw] leading-[1.4]">
             Empowering Young Minds
           </h1>
-          <p
-            className="text-gray-500 mb-[45px] text-[clamp(1vw,20vw,12px)] leading-[1.6]"
-            style={{ fontFamily: "var(--font-dm-sans)" }}
-          >
+          <p className="text-gray-500 mb-[45px] text-[clamp(1vw,20vw,12px)] leading-[1.6]">
             We focus on nurturing a foundation for lifelong learning in young minds. We
             believe that education is not just about acquiring knowledge, but also about
             instilling a love for learning and empowering children to become lifelong learners.

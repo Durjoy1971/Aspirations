@@ -24,10 +24,7 @@ const AboutUs: React.FC = () => {
             <div className="h-[10px] w-full bg-orange-400 rounded-full mt-2" />
           </div>
 
-          <h4
-            className="mt-[40px] text-gray-500 text-[1.25rem] md:text-[1.5rem] leading-relaxed text-justify font-normal max-w-[90%]"
-            style={{ fontFamily: "var(--font-dm-sans)" }}
-          >
+          <h4 className="mt-[40px] text-gray-500 text-[1.25rem] md:text-[1.5rem] leading-relaxed text-justify font-normal max-w-[90%]">
             We are working on creating an online course platform that offers free videos
             from a variety of sectors. Our goal is to curate and provide the best online
             courses available, with the aim of helping people learn and grow through

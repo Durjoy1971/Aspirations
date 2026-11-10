@@ -6,6 +6,7 @@ import { searchYoutube } from "@/lib/youtube";
 import { UserContext } from "@/context/UserContext";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { toast } from "sonner";
 
 interface SkillItem {
   idValue: number | string;
@@ -103,7 +104,7 @@ export default function SkillsPage() {
       }
       router.push("/skills-video-list");
     } else {
-      alert("Please sign in to view videos.");
+      toast.error("Please sign in to view videos.");
       router.push("/login");
     }
   };
@@ -139,8 +140,9 @@ export default function SkillsPage() {
                 </div>
                 <div>
                   <button
-                    className="inline-block py-[12px] px-[30px] rounded-[30px] bg-[#38b2ac] text-white text-[16px] font-bold border-none transition-all duration-300 hover:bg-[#2d8a83] cursor-pointer"
+                    className="inline-block py-[12px] px-[30px] rounded-[30px] bg-[#0f766e] text-white text-[16px] font-bold border-none transition-all duration-300 hover:bg-[#115e59] cursor-pointer"
                     onClick={(e) => handleViewCoursesClick(e, course.keywordValue)}
+                    aria-label={`View courses for ${course.titleValue}`}
                   >
                     View Courses
                   </button>

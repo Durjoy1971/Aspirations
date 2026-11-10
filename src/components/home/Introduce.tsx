@@ -34,6 +34,8 @@ const Introduce: React.FC = () => {
         <video
           ref={videoRef}
           onClick={handleVideoClick}
+          preload="none"
+          playsInline
           className="w-[60vw] max-w-[900px] cursor-pointer shadow-xl"
           style={{ borderBottomRightRadius: "40.5%" }}
         >

@@ -3,7 +3,7 @@ import Banner from "./Banner";
 import About from "./About";
 import Introduce from "./Introduce";
 import FavSkills from "./FavSkills";
-import Statatics from "./Statatics";
+import Statistics from "./Statistics";
 import AboutUs from "./AboutUs";
 import CFA from "./CFA";
 import Contact from "./Contact";
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
       <About />
       <Introduce />
       <FavSkills />
-      <Statatics />
+      <Statistics />
       <AboutUs />
       <CFA />
       <Contact />

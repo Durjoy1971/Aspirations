@@ -36,7 +36,6 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
               alt={video.title}
               width={420}
               height={236}
-              unoptimized
             />
           </div>
 

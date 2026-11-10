@@ -1,16 +1,18 @@
 "use client";
 
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect, Suspense } from "react";
 import { signInWithEmailAndPassword, signOut } from "firebase/auth";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { auth } from "@/lib/firebase";
 import { UserContext } from "@/context/UserContext";
+import { toast } from "sonner";
 
-export default function AdminLoginPage() {
+function AdminLoginForm() {
   const { dispatch } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,8 +23,10 @@ export default function AdminLoginPage() {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        if (email === "durjoybarua1971@gmail.com") {
-          alert("Sign In Successful");
+        const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || "durjoybarua1971@gmail.com";
+        if (email === adminEmail) {
+          document.cookie = "admin_auth=true; path=/; max-age=86400; SameSite=Lax";
+          toast.success("Admin login successful");
           dispatch({
             type: "LOGIN",
             payload: {
@@ -30,16 +34,18 @@ export default function AdminLoginPage() {
               email: userCredential.user.email || "",
             },
           });
-          router.push("/");
+          const from = searchParams.get("from");
+          router.push(from || "/");
         } else {
           signOut(auth).then(() => {
+            document.cookie = "admin_auth=; path=/; max-age=0; SameSite=Lax";
             dispatch({ type: "LOGOUT" });
-            alert("Unauthorized admin account.");
+            toast.error("You are not an Admin");
           });
         }
       })
       .catch((error) => {
-        alert("Invalid email or password.");
+        toast.error(error.message || "Admin login failed");
         console.error(error);
       });
   };
@@ -93,3 +99,16 @@ export default function AdminLoginPage() {
   );
 }
 
+export default function AdminLoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="pt-[140px] pb-[100px] flex justify-center items-center min-h-[70vh]">
+          <div className="w-12 h-12 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin" />
+        </div>
+      }
+    >
+      <AdminLoginForm />
+    </Suspense>
+  );
+}

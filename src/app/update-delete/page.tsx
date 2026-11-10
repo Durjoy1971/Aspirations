@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import UpdateSkill from "@/components/admin/UpdateSkill";
 import UpdateKidCorner from "@/components/admin/UpdateKidCorner";
+import AdminGuard from "@/components/admin/AdminGuard";
 
 export default function UpdateDataPage() {
   useEffect(() => {
@@ -11,15 +12,17 @@ export default function UpdateDataPage() {
   }, []);
 
   return (
-    <div className="pt-[140px] pb-[100px] px-4 min-h-screen">
-      <div className="max-w-[1200px] mx-auto">
-        <h1 className="text-3xl font-extrabold text-center text-gray-900 mb-8">
-          Admin Portal: Delete Courses
-        </h1>
-        <UpdateSkill />
-        <UpdateKidCorner />
+    <AdminGuard>
+      <div className="pt-[140px] pb-[100px] px-4 min-h-screen">
+        <div className="max-w-[1200px] mx-auto">
+          <h1 className="text-3xl font-extrabold text-center text-gray-900 mb-8">
+            Admin Portal: Delete Courses
+          </h1>
+          <UpdateSkill />
+          <UpdateKidCorner />
+        </div>
       </div>
-    </div>
+    </AdminGuard>
   );
 }
 

@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import { UserContext } from "@/context/UserContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { toast } from "sonner";
 
 export default function LoginPage() {
   const { dispatch } = useContext(UserContext);
@@ -39,7 +40,7 @@ export default function LoginPage() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, signInEmail, signInPassword);
       if (userCredential.user.emailVerified || userCredential.user.email === "durjoybarua1971@gmail.com") {
-        alert("Sign In Successful");
+        toast.success("Signed in successfully!");
         dispatch({
           type: "LOGIN",
           payload: {
@@ -49,10 +50,10 @@ export default function LoginPage() {
         });
         router.push("/");
       } else {
-        alert("Please verify your email before logging in.");
+        toast.error("Please verify your email before logging in.");
       }
     } catch (error: any) {
-      alert("Invalid email or password.");
+      toast.error(error.message || "Failed to sign in");
       console.error(error);
     }
   };
@@ -68,19 +69,19 @@ export default function LoginPage() {
       });
 
       await sendEmailVerification(user);
-      alert("Account Created Successfully! Please check your email to verify your account.");
+      toast.success("Account created successfully! Please verify your email.");
       setSignUpUsername("");
       setSignUpEmail("");
       setSignUpPassword("");
       setIsSignUpMode(false);
     } catch (error: any) {
-      let errorMessage = "An error occurred. Please try again later.";
+      let errorMessage = error.message || "Failed to create account";
       if (error.code === "auth/weak-password") {
         errorMessage = "Password should be at least 6 characters long.";
       } else if (error.code === "auth/email-already-in-use") {
         errorMessage = "Email address is already in use.";
       }
-      alert(errorMessage);
+      toast.error(errorMessage);
       console.error(error);
     }
   };

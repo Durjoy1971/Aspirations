@@ -22,9 +22,9 @@ const popularCourses: PopularCourse[] = [
     thumbnail: "/images/courses/html-tutorial.jpg",
   },
   {
-    title: "Phyton Pandas",
+    title: "Python Pandas",
     description:
-      "Practice your Phyton Pandas data science skills with problems on StrataScratch!",
+      "Practice your Python Pandas data science skills with problems on StrataScratch!",
     thumbnail: "/images/courses/pandas-tutorial.jpg",
   },
 ];

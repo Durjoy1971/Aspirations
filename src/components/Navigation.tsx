@@ -10,6 +10,7 @@ import { UserContext } from "@/context/UserContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { searchYoutube } from "@/lib/youtube";
+import { toast } from "sonner";
 
 const Navigation: React.FC = () => {
   const { state, dispatch } = useContext(UserContext);
@@ -21,8 +22,9 @@ const Navigation: React.FC = () => {
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
+        document.cookie = "admin_auth=; path=/; max-age=0; SameSite=Lax";
         dispatch({ type: "LOGOUT" });
-        alert("Log out successful");
+        toast.success("Logged out successfully");
         router.push("/");
       })
       .catch((error) => console.log(error));
@@ -98,35 +100,30 @@ const Navigation: React.FC = () => {
             <Link
               href="/"
               className="durjoy text-black font-medium text-[15px] py-4 px-2 hover:text-[#555] transition-colors"
-              style={{ fontFamily: "var(--font-rubik)" }}
             >
               Home
             </Link>
             <Link
               href={state.isLoggedIn ? "/skills" : "/login"}
               className="durjoy text-black font-medium text-[15px] py-4 px-2 hover:text-[#555] transition-colors"
-              style={{ fontFamily: "var(--font-rubik)" }}
             >
               Skills
             </Link>
             <Link
               href={state.isLoggedIn ? "/kids" : "/login"}
               className="durjoy text-black font-medium text-[15px] py-4 px-2 hover:text-[#555] transition-colors"
-              style={{ fontFamily: "var(--font-rubik)" }}
             >
               Kid&apos;s Corner
             </Link>
             <Link
               href="/blog"
               className="durjoy text-black font-medium text-[15px] py-4 px-2 hover:text-[#555] transition-colors"
-              style={{ fontFamily: "var(--font-rubik)" }}
             >
               Blog
             </Link>
             <button
               onClick={(e) => handleViewCoursesClick(e, "motivation madness")}
               className="durjoy text-black font-medium text-[15px] py-4 px-2 hover:text-[#555] transition-colors text-left bg-transparent border-none cursor-pointer"
-              style={{ fontFamily: "var(--font-rubik)" }}
             >
               Life and Teachings
             </button>
@@ -138,7 +135,6 @@ const Navigation: React.FC = () => {
               <button
                 onClick={handleSignOut}
                 className="durjoy text-black font-medium text-[15px] py-4 px-2 hover:text-[#555] transition-colors bg-transparent border-none cursor-pointer"
-                style={{ fontFamily: "var(--font-rubik)" }}
               >
                 LogOut
               </button>
@@ -147,14 +143,12 @@ const Navigation: React.FC = () => {
                 <Link
                   href="/login"
                   className="durjoy text-black font-medium text-[15px] py-4 px-2 hover:text-[#555] transition-colors"
-                  style={{ fontFamily: "var(--font-rubik)" }}
                 >
                   Log In
                 </Link>
                 <Link
                   href="/AdminLogin"
                   className="durjoy text-black font-medium text-[15px] py-4 px-2 hover:text-[#555] transition-colors"
-                  style={{ fontFamily: "var(--font-rubik)" }}
                 >
                   Admin
                 </Link>

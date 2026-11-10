@@ -7,6 +7,7 @@ import { searchYoutube } from "@/lib/youtube";
 import { UserContext } from "@/context/UserContext";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { toast } from "sonner";
 
 interface KidCourse {
   idValue: number | string;
@@ -90,7 +91,7 @@ export default function KidCornerPage() {
       }
       router.push("/skills-video-list");
     } else {
-      alert("Please sign in to view videos.");
+      toast.error("Please sign in to view videos.");
       router.push("/login");
     }
   };
@@ -132,8 +133,9 @@ export default function KidCornerPage() {
                   {course.descriptionValue}
                 </p>
                 <button
-                  className="bg-[#ff6b6b] hover:bg-[#ff4f4f] text-white border-none py-2 px-4 rounded-[5px] text-[16px] font-medium transition-colors cursor-pointer w-full text-center"
+                  className="bg-[#dc2626] hover:bg-[#b91c1c] text-white border-none py-2 px-4 rounded-[5px] text-[16px] font-bold transition-colors cursor-pointer w-full text-center"
                   onClick={(e) => handleViewCoursesClick(e, course.keywordValue)}
+                  aria-label={`View videos for ${course.titleValue}`}
                 >
                   View Videos
                 </button>

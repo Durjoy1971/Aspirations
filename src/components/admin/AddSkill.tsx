@@ -11,6 +11,7 @@ import {
   getDocs,
 } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { toast } from "sonner";
 
 const AddSkill: React.FC = () => {
   const iconRef = useRef<HTMLInputElement>(null);
@@ -64,7 +65,7 @@ const AddSkill: React.FC = () => {
       };
 
       await addDoc(collection(db, "SkillList"), newSkill);
-      alert("Skill Added Successfully");
+      toast.success("Skill added successfully!");
 
       if (iconRef.current) iconRef.current.value = "";
       if (titleRef.current) titleRef.current.value = "";
@@ -72,9 +73,9 @@ const AddSkill: React.FC = () => {
       if (keywordRef.current) keywordRef.current.value = "";
 
       fetchHighestId();
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error adding skill: ", error);
-      alert("Failed to add skill");
+      toast.error("Error adding skill: " + (error?.message || ""));
     }
   };
 

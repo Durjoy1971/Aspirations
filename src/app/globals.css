@@ -1,11 +1,7 @@
 @import "tailwindcss";
 
-:root {
-  --font-poppins: 'Poppins', sans-serif;
-  --font-dm-sans: 'DM Sans', sans-serif;
-  --font-rubik: 'Rubik', sans-serif;
-  --font-josefin: 'Josefin Sans', sans-serif;
-  --font-league-spartan: 'League Spartan', sans-serif;
+@theme {
+  --font-sans: var(--font-poppins), system-ui, -apple-system, sans-serif;
 }
 
 body {
@@ -37,12 +33,13 @@ body {
 
 /* Reusable buttons & micro-design details */
 .btn {
-  color: hsl(38, 100%, 98%);
-  font-family: 'Poppins', sans-serif;
+  color: #0f172a;
+  font-family: var(--font-sans);
+  font-weight: 600;
   padding: 1.2vw 1.8vw;
   border-radius: 2vw;
   transition: 0.2s ease-in-out;
-  font-size: clamp(0.95vw, 20vw, 12px);
+  font-size: clamp(14px, 1.2vw, 18px);
   cursor: pointer;
   display: inline-block;
   border: none;
@@ -51,29 +48,35 @@ body {
 
 .btn-primary {
   background: hsl(39, 100%, 50%);
+  color: #0f172a;
   box-shadow: 5px 10px 30px hsla(39, 100%, 50%, 0.3);
 }
 
 .btn-primary:is(:hover, :focus) {
   background: hsl(39, 100%, 45%);
+  color: #0f172a;
   transform: translateY(-3px);
 }
 
 .fav-btn-primary {
-  background-color: #4caf50;
-  color: #fff;
+  background-color: #15803d;
+  color: #ffffff;
+  font-weight: 600;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  font-family: 'Poppins', sans-serif;
 }
 
 .fav-btn-primary:hover {
-  background-color: #3e8e41;
-  color: black;
+  background-color: #166534;
+}
+
+:focus-visible {
+  outline: 2px solid #ea580c;
+  outline-offset: 2px;
 }
 
 /* Navigation micro-details */

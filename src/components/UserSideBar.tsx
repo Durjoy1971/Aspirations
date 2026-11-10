@@ -7,12 +7,13 @@ import { UserContext } from "@/context/UserContext";
 const UserSideBar: React.FC = () => {
   const { state } = useContext(UserContext);
 
-  if (!state || !state.isLoggedIn || state.email === "durjoybarua1971@gmail.com") {
+  const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || "durjoybarua1971@gmail.com";
+  if (!state || !state.isLoggedIn || state.email === adminEmail) {
     return null;
   }
 
   return (
-    <div className="relative z-[99999]">
+    <aside aria-label="User sidebar" className="hidden md:block relative z-[99999]">
       <div
         className="group fixed top-[130px] right-0 w-[90px] hover:w-[220px] py-[40px] px-[15px] flex flex-col justify-between items-center transition-all duration-500 rounded-l-2xl shadow-xl overflow-hidden"
         style={{
@@ -36,7 +37,7 @@ const UserSideBar: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </aside>
   );
 };
 
