@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,18 +14,18 @@ const popularCourses: PopularCourse[] = [
   {
     title: "C Language Tutorial",
     description: "You will learn about the basic concept of C with examples.",
-    thumbnail: "https://i.ytimg.com/vi/irqbmMNs2Bo/hq720.jpg",
+    thumbnail: "/images/courses/c-tutorial.jpg",
   },
   {
     title: "HTML Tutorial For Beginners",
     description: "Here you will learn the html concepts with examples from scratch.",
-    thumbnail: "https://i.ytimg.com/vi/HcOc7P5BMi4/hq720.jpg",
+    thumbnail: "/images/courses/html-tutorial.jpg",
   },
   {
     title: "Phyton Pandas",
     description:
       "Practice your Phyton Pandas data science skills with problems on StrataScratch!",
-    thumbnail: "https://i.ytimg.com/vi/vmEHCJofslg/hq720.jpg",
+    thumbnail: "/images/courses/pandas-tutorial.jpg",
   },
 ];
 
@@ -32,10 +33,11 @@ const FavSkills: React.FC = () => {
   return (
     <section className="bg-white py-[80px] text-center relative overflow-hidden">
       <div className="relative max-w-[1400px] mx-auto px-4">
-        {/* eslint-disable-next-js/no-img-element */}
-        <img
-          src="https://tinyurl.com/favskills01"
+        <Image
+          src="/images/shapes/departmets-vector.svg"
           alt="Vector line art"
+          width={400}
+          height={400}
           className="opacity-50 absolute right-0 top-0 pointer-events-none hidden lg:block"
         />
 
@@ -59,10 +61,12 @@ const FavSkills: React.FC = () => {
               >
                 <Link href="/skills" className="block overflow-hidden relative pt-[60%]">
                   <figure className="absolute inset-0 m-0">
-                    <img
+                    <Image
                       src={course.thumbnail}
                       alt={course.title}
-                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 350px"
+                      className="object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </figure>
                 </Link>

@@ -3,6 +3,7 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,24 +33,13 @@ export default function Blog4Page() {
           </Link>
           <h1 className="blog1_text">"The Essentials of Mobile Development"</h1>
           <div className="blog1_img_contain">
-            <img
-              className="blog1_img"
-              src="https://i.ibb.co/Q8kbwcH/durjoy.jpg"
-              alt=""
-            />
+            <Image className="blog1_img" src="/images/Q8kbwcH/durjoy.jpg" alt="Durjoy Barua" width={90} height={90} />
             <h4 className="blog1_img_title">Durjoy Barua</h4>
             <h6 className="blog1_img_title1">FullStack Developer</h6>
           </div>
         </div>
         <div id="flexi_blog1_1">
-          <img
-            src="https://i.ibb.co/Xb7jWNp/5006157.jpg"
-            alt=""
-            style={{ minWidth: 100, maxWidth: 1300 }}
-          />
-          {/* <img src='https://i.ibb.co/LQXqFj4/blg-final.png'/>
-{/* <img src='https://i.ibb.co/kxC7z42/blog.jpg' style={{
-                                                     height:510}}/> */}
+          <Image src="/images/Xb7jWNp/5006157.jpg" alt="Blog cover" width={1200} height={600} priority className="w-full max-w-[1200px] h-auto object-cover rounded-xl shadow-md" />
         </div>
 
         <div id="flexi_blog1_2">
@@ -65,15 +55,7 @@ export default function Blog4Page() {
 
 
           </p>
-          <img
-            className="blog1_img1"
-            src="https://i.ibb.co/0rk7Xy6/5035108.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width:800
-            }}
-          />
+          <Image className="blog1_img1" src="/images/0rk7Xy6/5035108.jpg" alt="Section 1 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">2.Cross-Platform App Development: </h1>
           <p className="blog1_text">
@@ -81,15 +63,7 @@ export default function Blog4Page() {
 
 
           </p>
-          <img
-            className="blog1_img2"
-            src="https://i.ibb.co/rGjWNgH/58343.jpg"
-            alt=""
-            style={{
-                height: 510,
-                width:800
-            }}
-          />
+          <Image className="blog1_img2" src="/images/rGjWNgH/58343.jpg" alt="Section 2 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">3.User Experience Design: </h1>
           <p className="blog1_text">
@@ -97,30 +71,14 @@ export default function Blog4Page() {
 
 
           </p>
-          <img
-            className="blog1_img3"
-            src="https://i.ibb.co/R9Mc6xX/111.jpg"
-            alt=""
-            style={{
-                height: 510,
-                width:800
-            }}
-          />
+          <Image className="blog1_img3" src="/images/R9Mc6xX/111.jpg" alt="Section 3 illustration" width={800} height={510} style={{ height: "auto" }} />
           <h1 className="blog1_point1">4.Backend Development:</h1>
           <p className="blog1_text">
           Backend development involves creating the server-side components of a mobile application, such as databases and APIs. Backend development is essential for providing data storage, authentication, and other critical functionality. Popular backend development languages include Node.js, Ruby on Rails, and Python.
 
 
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/MgXMQnp/111-1.jpg"
-            alt=""
-            style={{
-                height: 510,
-                width:800
-            }}
-          />
+          <Image className="blog1_img4" src="/images/MgXMQnp/111-1.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
 
 
 <h1 className="blog1_point1">5.App Store Optimization:</h1>
@@ -129,15 +87,7 @@ export default function Blog4Page() {
 
 
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/rycm16G/19198999.jpg"
-            alt=""
-            style={{
-                height: 510,
-                width:800
-            }}
-          />
+          <Image className="blog1_img4" src="/images/rycm16G/19198999.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
           <p className="blog1_bottom">
           Mobile development is a complex and rapidly evolving field that requires a diverse set of skills and technologies. The key points of mobile development include native app development, cross-platform app development, user experience design, backend development, and app store optimization. By leveraging these tools and techniques, mobile developers can create high-quality applications that meet the needs of businesses and users.
           </p>

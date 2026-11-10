@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedinIn,
@@ -15,11 +16,12 @@ const Footer: React.FC = () => {
         {/* Brand */}
         <div className="mb-[30px]">
           <Link href="/home">
-            {/* eslint-disable-next-js/no-img-element */}
-            <img
-              src="https://i.ibb.co/3RPhwRx/logo003.png"
+            <Image
+              src="/images/3RPhwRx/logo003.png"
               alt="Aspiration logo"
-              className="w-[15vw] min-w-[200px] -ml-[10px] mb-[20px]"
+              width={220}
+              height={55}
+              className="w-[15vw] min-w-[200px] h-auto -ml-[10px] mb-[20px] object-contain"
             />
           </Link>
           <p className="text-white text-base mb-[30px]">

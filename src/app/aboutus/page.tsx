@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Image from "next/image";
 
 export default function AboutUsPage() {
   useEffect(() => {
@@ -28,11 +29,12 @@ export default function AboutUsPage() {
             </p>
           </div>
           <div className="flex justify-center">
-            {/* eslint-disable-next-js/no-img-element */}
-            <img
-              src="https://i.ibb.co/2KpZXzk/woman-attending-online-class.jpg"
+            <Image
+              src="/images/2KpZXzk/woman-attending-online-class.jpg"
               alt="Online learning"
-              className="w-full max-w-[550px] rounded-lg object-cover shadow-md"
+              width={550}
+              height={380}
+              className="w-full max-w-[550px] h-auto rounded-lg object-cover shadow-md"
             />
           </div>
         </div>
@@ -55,9 +57,11 @@ export default function AboutUsPage() {
             Our website&apos;s skill-building section is a treasure trove of courses aimed at enhancing learners&apos; skill sets. From programming and languages to English grammar and CSS, we offer a range of courses to cater to learners&apos; diverse needs. Our courses are designed to be self-paced, allowing learners to study at their own pace and convenience.
           </p>
           <div className="flex justify-center my-6">
-            <img
-              src="https://i.ibb.co/rGYFGc9/22-removebg-preview.png"
+            <Image
+              src="/images/rGYFGc9/22-removebg-preview.png"
               alt="Skill building courses"
+              width={500}
+              height={350}
               className="max-w-full h-auto max-h-[350px] object-contain"
             />
           </div>
@@ -69,9 +73,11 @@ export default function AboutUsPage() {
             Our website&apos;s kids&apos; corner is a dedicated section for children&apos;s learning. It offers a range of courses specially designed for young learners, including kid&apos;s programming, kids&apos; grammar, and coding courses like beginner CSS and HTML. The courses are designed to be interactive and fun, making learning enjoyable for children.
           </p>
           <div className="flex justify-center my-6">
-            <img
-              src="https://i.ibb.co/Y3xFs1N/www.png"
+            <Image
+              src="/images/Y3xFs1N/www.png"
               alt="Kids corner"
+              width={500}
+              height={350}
               className="max-w-full h-auto max-h-[350px] object-contain"
             />
           </div>
@@ -83,9 +89,11 @@ export default function AboutUsPage() {
             Insights and Skills for Student Success is a blog dedicated to providing valuable guidance and practical advice to students as they embark on their career journey. With a focus on essential skills and life lessons, our blog equips students with the knowledge and tools necessary to make informed decisions about their career choices.
           </p>
           <div className="flex justify-center my-6">
-            <img
-              src="https://i.ibb.co/wWCS03s/3963180-removebg-preview.png"
+            <Image
+              src="/images/wWCS03s/3963180-removebg-preview.png"
               alt="Blog insights"
+              width={500}
+              height={350}
               className="max-w-full h-auto max-h-[350px] object-contain"
             />
           </div>
@@ -103,9 +111,11 @@ export default function AboutUsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[900px] mx-auto">
           {/* Dev 1 */}
           <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col items-center">
-            <img
-              src="https://i.ibb.co/h7T1c0g/profile-pic-4.png"
+            <Image
+              src="/images/h7T1c0g/profile-pic-4.png"
               alt="Md. Mahtab Uddin"
+              width={144}
+              height={144}
               className="w-36 h-36 rounded-full object-cover mb-4 border-4 border-orange-400 shadow"
             />
             <h3 className="text-2xl font-bold text-gray-900 mb-1">Md. Mahtab Uddin</h3>
@@ -117,9 +127,11 @@ export default function AboutUsPage() {
 
           {/* Dev 2 */}
           <div className="bg-white p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col items-center">
-            <img
-              src="https://i.ibb.co/23Nmdgm/photo-2023-04-25-19-46-13.jpg"
+            <Image
+              src="/images/23Nmdgm/photo-2023-04-25-19-46-13.jpg"
               alt="Durjoy Barua"
+              width={144}
+              height={144}
               className="w-36 h-36 rounded-full object-cover mb-4 border-4 border-blue-500 shadow"
             />
             <h3 className="text-2xl font-bold text-gray-900 mb-1">Durjoy Barua</h3>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { YouTubeVideo } from "@/lib/youtube";
 
 interface VideoCardProps {
@@ -29,11 +30,13 @@ const VideoCard: React.FC<VideoCardProps> = ({ video }) => {
           }}
         >
           <div className="md:w-1/2 flex items-center justify-center p-4">
-            {/* eslint-disable-next-js/no-img-element */}
-            <img
-              className="w-full max-w-[420px] rounded object-cover shadow-sm"
+            <Image
+              className="w-full max-w-[420px] h-auto rounded object-cover shadow-sm"
               src={video.thumbnail}
               alt={video.title}
+              width={420}
+              height={236}
+              unoptimized
             />
           </div>
 

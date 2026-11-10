@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
+import Image from "next/image";
 import { UserContext } from "@/context/UserContext";
 
 const UserSideBar: React.FC = () => {
@@ -20,11 +21,12 @@ const UserSideBar: React.FC = () => {
         }}
       >
         <div className="flex flex-col items-center gap-4 w-full p-1 rounded-lg group-hover:bg-white/40 group-hover:backdrop-blur-sm transition-colors">
-          {/* eslint-disable-next-js/no-img-element */}
-          <img
-            src="https://img.freepik.com/premium-vector/boy-with-dental-braces-dental-care-little-boy-portrait-circular-frame_254685-975.jpg?w=740"
+          <Image
+            src="/images/avatars/boy-with-dental-braces-dental-care-little-boy-portrait-circular-frame_254685-975.jpg"
             className="w-14 h-14 rounded-full object-cover border-2 border-white shadow-md"
             alt="User profile"
+            width={56}
+            height={56}
           />
           <div className="hidden group-hover:block text-center transition-all">
             <h2 className="text-white text-base font-semibold truncate max-w-[170px] drop-shadow">

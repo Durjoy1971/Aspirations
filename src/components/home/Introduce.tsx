@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 
@@ -21,10 +22,11 @@ const Introduce: React.FC = () => {
 
   return (
     <div className="relative flex justify-center items-center h-[50vw] min-h-[300px] bg-white overflow-hidden">
-      {/* eslint-disable-next-js/no-img-element */}
-      <img
-        src="https://tinyurl.com/intro979"
+      <Image
+        src="/images/shapes/video-bg.png"
         alt="background wave top"
+        width={1400}
+        height={400}
         className="absolute top-0 w-full h-[30vw] object-cover pointer-events-none"
       />
 
@@ -47,23 +49,29 @@ const Introduce: React.FC = () => {
           </div>
         )}
 
-        <img
-          src="https://tinyurl.com/intro0002"
+        <Image
+          src="/images/shapes/video-shape-1.png"
           alt="design shape 1"
-          className="absolute right-[1vw] w-[10vw] max-w-[100px] rotate-[20deg] pointer-events-none hidden sm:block"
+          width={100}
+          height={100}
+          className="absolute right-[1vw] w-[10vw] max-w-[100px] h-auto rotate-[20deg] pointer-events-none hidden sm:block"
         />
 
-        <img
-          src="https://github.com/Durjoy1971/image-storing-for-project/blob/main/blog-shape.png?raw=true"
+        <Image
+          src="/images/shapes/blog-shape.png"
           alt="design shape 2"
-          className="absolute right-[1vw] w-[10vw] max-w-[100px] pointer-events-none hidden sm:block"
+          width={100}
+          height={100}
+          className="absolute right-[1vw] w-[10vw] max-w-[100px] h-auto pointer-events-none hidden sm:block"
         />
       </div>
 
-      <img
-        src="https://tinyurl.com/intro979"
+      <Image
+        src="/images/shapes/video-bg.png"
         alt="background wave bottom"
-        className="absolute bottom-0 w-full rotate-180 object-cover pointer-events-none"
+        width={1400}
+        height={400}
+        className="absolute bottom-0 w-full h-[30vw] rotate-180 object-cover pointer-events-none"
       />
     </div>
   );

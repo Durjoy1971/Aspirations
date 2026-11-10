@@ -3,6 +3,7 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,24 +33,13 @@ export default function Blog7Page() {
           </Link>
           <h1 className="blog1_text">"The Essentials of Mobile Development"</h1>
           <div className="blog1_img_contain">
-            <img
-              className="blog1_img"
-              src="https://i.ibb.co/Q8kbwcH/durjoy.jpg"
-              alt=""
-            />
+            <Image className="blog1_img" src="/images/Q8kbwcH/durjoy.jpg" alt="Durjoy Barua" width={90} height={90} />
             <h4 className="blog1_img_title">Durjoy Barua</h4>
             <h6 className="blog1_img_title1">FullStack Developer</h6>
           </div>
         </div>
         <div id="flexi_blog1_1">
-          <img
-            src="https://i.ibb.co/R0gg08z/29493.jpg"
-            alt=""
-            style={{ minWidth: 100, maxWidth: 1300 }}
-          />
-          {/* <img src='https://i.ibb.co/LQXqFj4/blg-final.png'/>
-{/* <img src='https://i.ibb.co/kxC7z42/blog.jpg' style={{
-                                                     height:510}}/> */}
+          <Image src="/images/R0gg08z/29493.jpg" alt="Blog cover" width={1200} height={600} priority className="w-full max-w-[1200px] h-auto object-cover rounded-xl shadow-md" />
         </div>
 
         <div id="flexi_blog1_2">
@@ -67,15 +57,7 @@ export default function Blog7Page() {
             on a wide range of topics. Whether you are a beginner or an expert,
             you can find courses that match your skill level and interests.
           </p>
-          <img
-            className="blog1_img1"
-            src="https://i.ibb.co/NxWk8hp/people-education-online-with-computer-illustration-design-24877-63616.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img1" src="/images/NxWk8hp/people-education-online-with-computer-illustration-design-24877-63616.jpg" alt="Section 1 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">2.User-Friendly Platform: </h1>
           <p className="blog1_text">
@@ -83,15 +65,7 @@ export default function Blog7Page() {
             You can access courses and tutorials with just a few clicks, and our
             intuitive interface makes it easy to find what you are looking for.
           </p>
-          <img
-            className="blog1_img2"
-            src="https://i.ibb.co/ws12Qt4/visual-teenager-reading-book-mobile-phone-educate-learing-online-concept-design-isometric-illustrati.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img2" src="/images/ws12Qt4/visual-teenager-reading-book-mobile-phone-educate-learing-online-concept-design-isometric-illustrati.jpg" alt="Section 2 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">3.Free Access: </h1>
           <p className="blog1_text">
@@ -100,30 +74,14 @@ export default function Blog7Page() {
             that education should be accessible to everyone, and our platform
             reflects that commitment.
           </p>
-          <img
-            className="blog1_img3"
-            src="https://i.ibb.co/Z1wjYL2/media-content-management-vlogging-activities-product-videos-sharing-online-marketing-advertising-too.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img3" src="/images/Z1wjYL2/media-content-management-vlogging-activities-product-videos-sharing-online-marketing-advertising-too.jpg" alt="Section 3 illustration" width={800} height={510} style={{ height: "auto" }} />
           <h1 className="blog1_point1">4.Quality Content:</h1>
           <p className="blog1_text">
             Our courses and tutorials are created by experts in their respective
             fields. We ensure that all of our content is of the highest quality,
             so you can be confident that you are learning from the best.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/1Kmz97y/student-girl-with-laptop-dreams-diploma-255494-102.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/1Kmz97y/student-girl-with-laptop-dreams-diploma-255494-102.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">5.Flexibility:</h1>
           <p className="blog1_text">
@@ -132,15 +90,7 @@ export default function Blog7Page() {
             any time, and on any device. This means that you can learn at your
             own pace, according to your own schedule.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/FHTWv61/social-network-teamwork-vector-concept-81522-387.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/FHTWv61/social-network-teamwork-vector-concept-81522-387.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <p className="blog1_bottom">
             Our website is a valuable resource for anyone who wants to learn new

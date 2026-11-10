@@ -3,6 +3,7 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,24 +33,13 @@ export default function Blog9Page() {
           </Link>
           <h1 className="blog1_text">"The Essentials of Mobile Development"</h1>
           <div className="blog1_img_contain">
-            <img
-              className="blog1_img"
-              src="https://i.ibb.co/Q8kbwcH/durjoy.jpg"
-              alt=""
-            />
+            <Image className="blog1_img" src="/images/Q8kbwcH/durjoy.jpg" alt="Durjoy Barua" width={90} height={90} />
             <h4 className="blog1_img_title">Durjoy Barua</h4>
             <h6 className="blog1_img_title1">FullStack Developer</h6>
           </div>
         </div>
         <div id="flexi_blog1_1">
-          <img
-            src="https://i.ibb.co/bHPrnpn/4903406.jpg"
-            alt=""
-            style={{ minWidth: 100, maxWidth: 1300 }}
-          />
-          {/* <img src='https://i.ibb.co/LQXqFj4/blg-final.png'/>
-{/* <img src='https://i.ibb.co/kxC7z42/blog.jpg' style={{
-                                                     height:510}}/> */}
+          <Image src="/images/bHPrnpn/4903406.jpg" alt="Blog cover" width={1200} height={600} priority className="w-full max-w-[1200px] h-auto object-cover rounded-xl shadow-md" />
         </div>
 
         <div id="flexi_blog1_2">
@@ -66,15 +56,7 @@ export default function Blog9Page() {
             priorities. Focus on completing the tasks that will have the
             greatest impact on your goals and objectives.
           </p>
-          <img
-            className="blog1_img1"
-            src="https://i.ibb.co/3zP4yxB/45227.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img1" src="/images/3zP4yxB/45227.jpg" alt="Section 1 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">2.Create a Schedule: </h1>
           <p className="blog1_text">
@@ -82,15 +64,7 @@ export default function Blog9Page() {
             much as possible. This will help you stay on track and make the most
             of your time
           </p>
-          <img
-            className="blog1_img2"
-            src="https://i.ibb.co/pw53Tww/6234265.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img2" src="/images/pw53Tww/6234265.jpg" alt="Section 2 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">3.Eliminate Distractions: </h1>
           <p className="blog1_text">
@@ -98,30 +72,14 @@ export default function Blog9Page() {
             them. This might include turning off your phone, closing your email,
             or finding a quiet space to work.
           </p>
-          <img
-            className="blog1_img3"
-            src="https://i.ibb.co/WsmpnMH/3681597.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img3" src="/images/WsmpnMH/3681597.jpg" alt="Section 3 illustration" width={800} height={510} style={{ height: "auto" }} />
           <h1 className="blog1_point1">4.Take Breaks:</h1>
           <p className="blog1_text">
             It's important to take regular breaks to avoid burnout and maintain
             productivity. This might include going for a walk, doing some
             stretching exercises, or taking a power nap.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/MSGv6KS/4436053.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/MSGv6KS/4436053.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">5.Learn to Say No:</h1>
           <p className="blog1_text">
@@ -129,15 +87,7 @@ export default function Blog9Page() {
             things that matter most. Be selective about the tasks and projects
             you take on, and focus on those that align with your goals.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/mF2Wv6N/4097791.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/mF2Wv6N/4097791.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">6.Delegate Tasks: </h1>
           <p className="blog1_text">
@@ -146,15 +96,7 @@ export default function Blog9Page() {
             virtual assistant or delegating tasks to colleagues or family
             members.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/q9SZMj4/2109-q708-020-S-m012-c10-politicians-round-table-flat.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/q9SZMj4/2109-q708-020-S-m012-c10-politicians-round-table-flat.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
           <p className="blog1_bottom">
             In conclusion, utilizing our time effectively is essential for
             achieving our goals and living a fulfilling life. By setting

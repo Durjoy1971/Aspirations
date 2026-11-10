@@ -3,6 +3,7 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -34,24 +35,13 @@ export default function Blog5Page() {
             "Exploring the Essentials of Photography"
           </h1>
           <div className="blog1_img_contain">
-            <img
-              className="blog1_img"
-              src="https://i.ibb.co/Q8kbwcH/durjoy.jpg"
-              alt=""
-            />
+            <Image className="blog1_img" src="/images/Q8kbwcH/durjoy.jpg" alt="Durjoy Barua" width={90} height={90} />
             <h4 className="blog1_img_title">Durjoy Barua</h4>
             <h6 className="blog1_img_title1">FullStack Developer</h6>
           </div>
         </div>
         <div id="flexi_blog1_1">
-          <img
-            src="https://i.ibb.co/rZswsNF/professional-camera-blurred.jpg"
-            alt=""
-            style={{ minWidth: 100, maxWidth: 1300 }}
-          />
-          {/* <img src='https://i.ibb.co/LQXqFj4/blg-final.png'/>
-{/* <img src='https://i.ibb.co/kxC7z42/blog.jpg' style={{
-                                                     height:510}}/> */}
+          <Image src="/images/rZswsNF/professional-camera-blurred.jpg" alt="Blog cover" width={1200} height={600} priority className="w-full max-w-[1200px] h-auto object-cover rounded-xl shadow-md" />
         </div>
 
         <div id="flexi_blog1_2">
@@ -71,15 +61,7 @@ export default function Blog5Page() {
             factors such as framing, angles, and balance. Good composition can
             make an ordinary photograph look extraordinary.
           </p>
-          <img
-            className="blog1_img1"
-            src="https://i.ibb.co/7JTvHHb/top-view-autumn-leaves-with-photos-camera.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img1" src="/images/7JTvHHb/top-view-autumn-leaves-with-photos-camera.jpg" alt="Section 1 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">2.Lighting: </h1>
           <p className="blog1_text">
@@ -88,15 +70,7 @@ export default function Blog5Page() {
             Lighting involves factors such as the direction of light, the
             intensity of light, and the quality of light.
           </p>
-          <img
-            className="blog1_img2"
-            src="https://i.ibb.co/kmRqDDy/1163.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img2" src="/images/kmRqDDy/1163.jpg" alt="Section 2 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">3.Camera Settings: </h1>
           <p className="blog1_text">
@@ -106,15 +80,7 @@ export default function Blog5Page() {
             shutter speed controls the duration of the exposure, and ISO
             controls the sensitivity of the camera to light.
           </p>
-          <img
-            className="blog1_img3"
-            src="https://i.ibb.co/7gGG2Ng/sl-121019-25870-83.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img3" src="/images/7gGG2Ng/sl-121019-25870-83.jpg" alt="Section 3 illustration" width={800} height={510} style={{ height: "auto" }} />
           <h1 className="blog1_point1">4.Editing:</h1>
           <p className="blog1_text">
             Editing is the process of post-processing a photograph to enhance
@@ -122,15 +88,7 @@ export default function Blog5Page() {
             brightness, contrast, and color balance. Editing can also involve
             cropping and removing unwanted elements from a photograph.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/rxMg40Q/empty-modern-creative-agency-office-with-dual-monitors-setup-with-processing-video-film-montage-vide.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/rxMg40Q/empty-modern-creative-agency-office-with-dual-monitors-setup-with-processing-video-film-montage-vide.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">5.Photography Styles:</h1>
           <p className="blog1_text">
@@ -138,15 +96,7 @@ export default function Blog5Page() {
             landscape, and street photography. Each style has its own unique
             characteristics and requires a different set of skills.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/c1PvhB4/medium-shot-man-wearing-hat-23-2149126957.jpgg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/c1PvhB4/medium-shot-man-wearing-hat-23-2149126957.jpgg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
           <p className="blog1_bottom">
             Photography, the art and science of capturing images, has evolved
             significantly over two centuries. Its significance lies in freezing

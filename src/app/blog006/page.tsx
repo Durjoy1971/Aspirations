@@ -3,6 +3,7 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,24 +33,13 @@ export default function Blog6Page() {
           </Link>
           <h1 className="blog1_text">"The Essentials of Art and Designt"</h1>
           <div className="blog1_img_contain">
-            <img
-              className="blog1_img"
-              src="https://i.ibb.co/Q8kbwcH/durjoy.jpg"
-              alt=""
-            />
+            <Image className="blog1_img" src="/images/Q8kbwcH/durjoy.jpg" alt="Durjoy Barua" width={90} height={90} />
             <h4 className="blog1_img_title">Durjoy Barua</h4>
             <h6 className="blog1_img_title1">FullStack Developer</h6>
           </div>
         </div>
         <div id="flexi_blog1_1">
-          <img
-            src="https://i.ibb.co/4MYp9Z4/vibrant-yellow-peony-bouquet-symbolizes-spring-freshness-generated-by-ai-188544-11712.jpg"
-            alt=""
-            style={{ minWidth: 100, maxWidth: 1300 }}
-          />
-          {/* <img src='https://i.ibb.co/LQXqFj4/blg-final.png'/>
-{/* <img src='https://i.ibb.co/kxC7z42/blog.jpg' style={{
-                                                     height:510}}/> */}
+          <Image src="/images/4MYp9Z4/vibrant-yellow-peony-bouquet-symbolizes-spring-freshness-generated-by-ai-188544-11712.jpg" alt="Blog cover" width={1200} height={600} priority className="w-full max-w-[1200px] h-auto object-cover rounded-xl shadow-md" />
         </div>
 
         <div id="flexi_blog1_2">
@@ -68,15 +58,7 @@ export default function Blog6Page() {
             ideas. Creativity is essential for artists and designers to create
             works that are innovative and unique.
           </p>
-          <img
-            className="blog1_img1"
-            src="https://i.ibb.co/n7HHJTz/colorful-painting-with-brush-it-1340-32188.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img1" src="/images/n7HHJTz/colorful-painting-with-brush-it-1340-32188.jpg" alt="Section 1 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">2.Composition: </h1>
           <p className="blog1_text">
@@ -85,15 +67,7 @@ export default function Blog6Page() {
             visual flow. Good composition is essential for creating works that
             are aesthetically pleasing and effective.
           </p>
-          <img
-            className="blog1_img2"
-            src="https://i.ibb.co/6XTmtVk/colorful-paper-art-piece-that-has-word-it-1340-35458.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img2" src="/images/6XTmtVk/colorful-paper-art-piece-that-has-word-it-1340-35458.jpg" alt="Section 2 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">3.Color Theory: </h1>
           <p className="blog1_text">
@@ -103,15 +77,7 @@ export default function Blog6Page() {
             critical for artists and designers to create works that effectively
             communicate their intended message.
           </p>
-          <img
-            className="blog1_img3"
-            src="https://i.ibb.co/6PKX1LK/collection-colored-pencils-drawing-lemon-1340-29087.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img3" src="/images/6PKX1LK/collection-colored-pencils-drawing-lemon-1340-29087.jpg" alt="Section 3 illustration" width={800} height={510} style={{ height: "auto" }} />
           <h1 className="blog1_point1">4.Materials and Tools:</h1>
           <p className="blog1_text">
             Materials and tools are essential for creating works of art and
@@ -120,15 +86,7 @@ export default function Blog6Page() {
             materials and tools effectively is essential for artists and
             designers to bring their ideas to life.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/Ny9pkWy/colorful-set-items-including-pencil-notebook-pencil-marker-1340-29059.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/Ny9pkWy/colorful-set-items-including-pencil-notebook-pencil-marker-1340-29059.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">5.History and Context: </h1>
           <p className="blog1_text">
@@ -137,15 +95,7 @@ export default function Blog6Page() {
             artists and designers create works that are culturally relevant and
             meaningful.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/Nt1NfyD/handcrafted-memories-captured-photo-album-generated-by-ai-188544-10901.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/Nt1NfyD/handcrafted-memories-captured-photo-album-generated-by-ai-188544-10901.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
           <p className="blog1_bottom">
             Art and design are essential forms of creative expression that have
             shaped human culture for centuries. The key points of art and design

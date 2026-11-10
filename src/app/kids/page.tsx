@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useContext, useEffect, useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { searchYoutube } from "@/lib/youtube";
 import { UserContext } from "@/context/UserContext";
@@ -18,28 +19,28 @@ interface KidCourse {
 const defaultKidCourses: KidCourse[] = [
   {
     idValue: 1,
-    imageValue: "https://i.ibb.co/Y3xFs1N/www.png",
+    imageValue: "/images/Y3xFs1N/www.png",
     titleValue: "Scratch Programming",
     descriptionValue: "Fun and visual block-based programming designed for creative young learners.",
     keywordValue: "scratch programming for kids",
   },
   {
     idValue: 2,
-    imageValue: "https://i.ibb.co/rGYFGc9/22-removebg-preview.png",
+    imageValue: "/images/rGYFGc9/22-removebg-preview.png",
     titleValue: "English Grammar",
     descriptionValue: "Interactive stories, fun vocabulary games, and phonics for school kids.",
     keywordValue: "english grammar for kids",
   },
   {
     idValue: 3,
-    imageValue: "https://i.ibb.co/wWCS03s/3963180-removebg-preview.png",
+    imageValue: "/images/wWCS03s/3963180-removebg-preview.png",
     titleValue: "Math & Puzzles",
     descriptionValue: "Exciting mental math challenges, number adventures, and brain-teasers.",
     keywordValue: "fun math for kids",
   },
   {
     idValue: 4,
-    imageValue: "https://i.ibb.co/2KpZXzk/woman-attending-online-class.jpg",
+    imageValue: "/images/2KpZXzk/woman-attending-online-class.jpg",
     titleValue: "Creative Drawing",
     descriptionValue: "Step-by-step drawing, coloring, and cartoon design tutorials for beginners.",
     keywordValue: "drawing tutorial for kids",
@@ -110,13 +111,17 @@ export default function KidCornerPage() {
               key={course.idValue}
               className="group relative w-[300px] h-[320px] bg-[#ff4f4f] rounded-[10px] overflow-hidden shadow-[0px_0px_10px_rgba(0,0,0,0.2)] transition-transform duration-300 hover:-translate-y-2"
             >
-              <div className="w-full h-[90%] overflow-hidden rounded-t-[10px]">
-                {/* eslint-disable-next-js/no-img-element */}
-                <img
-                  src={course.imageValue}
-                  alt={course.titleValue}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
+              <div className="relative w-full h-[90%] overflow-hidden rounded-t-[10px]">
+                {course.imageValue && (
+                  <Image
+                    src={course.imageValue}
+                    alt={course.titleValue || "Kid course"}
+                    fill
+                    sizes="300px"
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    unoptimized={course.imageValue.startsWith("http")}
+                  />
+                )}
               </div>
 
               <div className="absolute bottom-0 left-0 w-full p-5 bg-white/95 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-b-[10px] text-left">

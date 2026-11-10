@@ -1,16 +1,18 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const About: React.FC = () => {
   return (
     <section className="block bg-white py-[80px] pb-[100px] px-[5vw]">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-[50px]">
         <div className="flex justify-center md:justify-start">
-          {/* eslint-disable-next-js/no-img-element */}
-          <img
-            className="w-[32vw] min-w-[220px] ml-0 md:ml-[12vw]"
-            src="https://i.ibb.co/DGLmFxP/about-banner.png"
+          <Image
+            className="w-[32vw] min-w-[220px] h-auto ml-0 md:ml-[12vw] object-contain"
+            src="/images/DGLmFxP/about-banner.png"
             alt="about-banner"
+            width={450}
+            height={450}
           />
         </div>
         <div className="mr-0 md:mr-[9vw]">

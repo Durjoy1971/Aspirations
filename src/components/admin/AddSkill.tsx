@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 import {
   collection,
   addDoc,
@@ -86,11 +87,12 @@ const AddSkill: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         <div className="flex justify-center">
-          {/* eslint-disable-next-js/no-img-element */}
-          <img
-            src="https://i.ibb.co/DGdxfqh/AddSkill.png"
+          <Image
+            src="/images/DGdxfqh/AddSkill.png"
             alt="Add Skill Illustration"
-            className="w-full max-w-[420px] object-contain rounded-xl"
+            width={420}
+            height={300}
+            className="w-full max-w-[420px] h-auto object-contain rounded-xl"
           />
         </div>
 

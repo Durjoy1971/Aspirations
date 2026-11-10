@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const CFA: React.FC = () => {
   return (
@@ -24,11 +25,12 @@ const CFA: React.FC = () => {
       </div>
 
       <div className="hidden md:block absolute bottom-0 right-0 mr-[13vw]">
-        {/* eslint-disable-next-js/no-img-element */}
-        <img
-          className="w-[18vw] min-w-[150px] object-contain"
-          src="https://i.ibb.co/1ZQ3Mpt/cta-banner.png"
+        <Image
+          className="w-[18vw] min-w-[150px] h-auto object-contain"
+          src="/images/1ZQ3Mpt/cta-banner.png"
           alt="cta-banner"
+          width={280}
+          height={280}
         />
       </div>
     </section>

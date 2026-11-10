@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useContext, useEffect, useState } from "react";
+import Image from "next/image";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
@@ -229,14 +230,12 @@ export default function LoginPage() {
               Sign up
             </button>
           </div>
-          {/* eslint-disable-next-js/no-img-element */}
-          <img
-            src="https://raw.githubusercontent.com/Durjoy1971/image-storing-for-project/d487a194e9fa133f62e06ef44bf1644ddfa68505/log.svg?token=AVZYKT6SIQWXOK5TLLQLHGTEJCVI2"
+          <Image
+            src="/images/shapes/log.svg"
             alt="Sign in illustration"
-            className="w-[280px] max-w-full"
-            onError={(e) => {
-              (e.target as HTMLElement).style.display = "none";
-            }}
+            width={280}
+            height={280}
+            className="w-[280px] max-w-full h-auto"
           />
         </div>
 
@@ -258,14 +257,12 @@ export default function LoginPage() {
               Sign in
             </button>
           </div>
-          {/* eslint-disable-next-js/no-img-element */}
-          <img
-            src="https://raw.githubusercontent.com/Durjoy1971/image-storing-for-project/d487a194e9fa133f62e06ef44bf1644ddfa68505/register.svg?token=AVZYKT4DAXBPGSTRKJEUCBDEJCVG4"
+          <Image
+            src="/images/shapes/register.svg"
             alt="Sign up illustration"
-            className="w-[280px] max-w-full"
-            onError={(e) => {
-              (e.target as HTMLElement).style.display = "none";
-            }}
+            width={280}
+            height={280}
+            className="w-[280px] max-w-full h-auto"
           />
         </div>
       </div>

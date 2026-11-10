@@ -3,6 +3,7 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -34,24 +35,13 @@ export default function Blog8Page() {
             "Unlocking the Benefits of Online Education for Kids"
           </h1>
           <div className="blog1_img_contain">
-            <img
-              className="blog1_img"
-              src="https://i.ibb.co/Q8kbwcH/durjoy.jpg"
-              alt=""
-            />
+            <Image className="blog1_img" src="/images/Q8kbwcH/durjoy.jpg" alt="Durjoy Barua" width={90} height={90} />
             <h4 className="blog1_img_title">Durjoy Barua</h4>
             <h6 className="blog1_img_title1">FullStack Developer</h6>
           </div>
         </div>
         <div id="flexi_blog1_1">
-          <img
-            src="https://i.ibb.co/Ns5tpKx/mjtt-gmi7-210901.jpg"
-            alt=""
-            style={{ minWidth: 100, maxWidth: 1300 }}
-          />
-          {/* <img src='https://i.ibb.co/LQXqFj4/blg-final.png'/>
-{/* <img src='https://i.ibb.co/kxC7z42/blog.jpg' style={{
-                                                     height:510}}/> */}
+          <Image src="/images/Ns5tpKx/mjtt-gmi7-210901.jpg" alt="Blog cover" width={1200} height={600} priority className="w-full max-w-[1200px] h-auto object-cover rounded-xl shadow-md" />
         </div>
 
         <div id="flexi_blog1_2">
@@ -71,15 +61,7 @@ export default function Blog8Page() {
             kids can learn when they are most alert and focused, rather than
             being constrained by a fixed classroom schedule.
           </p>
-          <img
-            className="blog1_img1"
-            src="https://i.ibb.co/Jkqtv1W/cvnn-5eqa-220905.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img1" src="/images/Jkqtv1W/cvnn-5eqa-220905.jpg" alt="Section 1 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">2.Personalized Learning: </h1>
           <p className="blog1_text">
@@ -88,15 +70,7 @@ export default function Blog8Page() {
             style. This tailored approach can help kids achieve their full
             potential and excel academically.
           </p>
-          <img
-            className="blog1_img2"
-            src="https://i.ibb.co/kxTxqV2/ata4-c3te-220905.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img2" src="/images/kxTxqV2/ata4-c3te-220905.jpg" alt="Section 2 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">3.Wide Range of Resources: </h1>
           <p className="blog1_text">
@@ -105,15 +79,7 @@ export default function Blog8Page() {
             classrooms. Kids can explore different subjects and topics that
             interest them, and learn in a way that suits their individual needs.
           </p>
-          <img
-            className="blog1_img3"
-            src="https://i.ibb.co/TMHyBTR/nytf-miov-210901.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img3" src="/images/TMHyBTR/nytf-miov-210901.jpg" alt="Section 3 illustration" width={800} height={510} style={{ height: "auto" }} />
           <h1 className="blog1_point1">4.Safe Learning Environment:</h1>
           <p className="blog1_text">
             Online education provides a safe learning environment for kids, free
@@ -121,15 +87,7 @@ export default function Blog8Page() {
             that their children are learning in a secure and supportive
             environment.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/nwSf6vH/51825.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/nwSf6vH/51825.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">5.Interactive Learning:</h1>
           <p className="blog1_text">
@@ -138,15 +96,7 @@ export default function Blog8Page() {
             can help them develop communication and collaboration skills, which
             are essential for their future academic and professional success.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/rynMGYg/3702965.jpg"
-            alt=""
-            style={{
-              height: 510,
-              width: 800,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/rynMGYg/3702965.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
           <p className="blog1_bottom">
             In conclusion, online education offers numerous benefits for kids,
             including flexibility, personalized learning, access to a wide range

@@ -3,6 +3,7 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
@@ -32,24 +33,13 @@ export default function Blog1Page() {
           </Link>
           <h1 className="blog1_text">"Learn to Code: Beginner's Edition"</h1>
           <div className="blog1_img_contain">
-            <img
-              className="blog1_img"
-              src="https://i.ibb.co/Q8kbwcH/durjoy.jpg"
-              alt=""
-            />
+            <Image className="blog1_img" src="/images/Q8kbwcH/durjoy.jpg" alt="Durjoy Barua" width={90} height={90} />
             <h4 className="blog1_img_title">Durjoy Barua</h4>
             <h6 className="blog1_img_title1">FullStack Developer</h6>
           </div>
         </div>
         <div id="flexi_blog1_1">
-          <img
-            src="https://i.ibb.co/m8ZppcR/2.jpg"
-            alt=""
-            style={{ minWidth: 100, maxWidth: 1300 }}
-          />
-          {/* <img src='https://i.ibb.co/LQXqFj4/blg-final.png'/>
-{/* <img src='https://i.ibb.co/kxC7z42/blog.jpg' style={{
-                                                     height:510}}/> */}
+          <Image src="/images/m8ZppcR/2.jpg" alt="Blog cover" width={1200} height={600} priority className="w-full max-w-[1200px] h-auto object-cover rounded-xl shadow-md" />
         </div>
 
         <div id="flexi_blog1_2">
@@ -73,14 +63,7 @@ export default function Blog1Page() {
             fundamentals. Don't be tempted to jump from language to language too
             quickly, as this can be overwhelming and counterproductive
           </p>
-          <img
-            className="blog1_img1"
-            src="https://i.ibb.co/2v2ZB2K/3.jpg"
-            alt=""
-            style={{
-              height: 510,
-            }}
-          />
+          <Image className="blog1_img1" src="/images/2v2ZB2K/3.jpg" alt="Section 1 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">2. Practice, practice, practice</h1>
           <p className="blog1_text">
@@ -93,14 +76,7 @@ export default function Blog1Page() {
             practice, the more comfortable you'll become with the language and
             the better your coding skills will become
           </p>
-          <img
-            className="blog1_img2"
-            src="https://i.ibb.co/nrQZkZB/4.png"
-            alt=""
-            style={{
-              height: 510,
-            }}
-          />
+          <Image className="blog1_img2" src="/images/nrQZkZB/4.png" alt="Section 2 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <h1 className="blog1_point1">3.Learn from otherst</h1>
           <p className="blog1_text">
@@ -112,14 +88,7 @@ export default function Blog1Page() {
             their code. You can also attend coding meetups and conferences to
             network with other programmers in person.
           </p>
-          <img
-            className="blog1_img3"
-            src="https://i.ibb.co/SVvvCcM/5.jpg"
-            alt=""
-            style={{
-              height: 510,
-            }}
-          />
+          <Image className="blog1_img3" src="/images/SVvvCcM/5.jpg" alt="Section 3 illustration" width={800} height={510} style={{ height: "auto" }} />
           <h1 className="blog1_point1">4. Have fun!</h1>
           <p className="blog1_text">
             Learning to code can be challenging, but it can also be incredibly
@@ -129,14 +98,7 @@ export default function Blog1Page() {
             yourself getting frustrated, take a break and come back to it later
             with a fresh perspective.
           </p>
-          <img
-            className="blog1_img4"
-            src="https://i.ibb.co/mDb8D6B/6.jpg"
-            alt=""
-            style={{
-              height: 510,
-            }}
-          />
+          <Image className="blog1_img4" src="/images/mDb8D6B/6.jpg" alt="Section 4 illustration" width={800} height={510} style={{ height: "auto" }} />
 
           <p className="blog1_bottom">
             Learning to code can be a fulfilling and empowering experience, even

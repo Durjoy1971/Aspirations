@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Banner: React.FC = () => {
   return (
@@ -31,11 +32,13 @@ const Banner: React.FC = () => {
           </Link>
         </div>
         <figure className="m-0 flex justify-center">
-          {/* eslint-disable-next-js/no-img-element */}
-          <img
-            className="w-[35vw] min-w-[220px] ml-0 md:ml-[3vw]"
-            src="https://i.ibb.co/Wp9k0Bq/Banner-picture.png"
+          <Image
+            className="w-[35vw] min-w-[220px] h-auto ml-0 md:ml-[3vw] object-contain"
+            src="/images/Wp9k0Bq/Banner-picture.png"
             alt="A young lady sits, holding a pen and a notebook."
+            width={500}
+            height={500}
+            priority
           />
         </figure>
       </div>

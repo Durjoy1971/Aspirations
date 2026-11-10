@@ -1,15 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const AboutUs: React.FC = () => {
   return (
     <div className="my-[100px] px-4 max-w-[1400px] mx-auto">
       <div className="flex flex-col lg:flex-row items-center gap-10">
         <div className="w-full lg:w-1/2 flex justify-center">
-          {/* eslint-disable-next-js/no-img-element */}
-          <img
-            src="https://i.ibb.co/KD0hZWs/About-Us.png"
+          <Image
+            src="/images/KD0hZWs/About-Us.png"
             alt="About Us Banner"
+            width={600}
+            height={400}
             className="max-w-full h-auto object-contain rounded-lg"
           />
         </div>

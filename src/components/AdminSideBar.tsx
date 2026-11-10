@@ -2,6 +2,7 @@
 
 import React, { useContext } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { UserContext } from "@/context/UserContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
@@ -24,11 +25,12 @@ const AdminSideBar: React.FC = () => {
       >
         {/* User Card */}
         <div className="flex flex-col items-center gap-3 w-full p-2 rounded-lg group-hover:bg-black/30 group-hover:backdrop-blur-sm transition-colors">
-          {/* eslint-disable-next-js/no-img-element */}
-          <img
-            src="https://img.freepik.com/premium-vector/boy-with-braces-teeth-dental-care_254685-1461.jpg"
+          <Image
+            src="/images/avatars/boy-with-braces-teeth-dental-care_254685-1461.jpg"
             className="w-14 h-14 rounded-full object-cover border-2 border-yellow-300 shadow-md"
             alt="Admin profile"
+            width={56}
+            height={56}
           />
           <div className="hidden group-hover:block text-center transition-all">
             <h2 className="text-yellow-300 text-base font-bold tracking-wider">ASPIRANT</h2>

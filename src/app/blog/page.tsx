@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -24,7 +25,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     tag: "Programming",
     title: "Learn to Code: Beginner's Edition",
     date: "March 11, 2023",
-    image: "https://i.ibb.co/ZmStb5s/1.jpg",
+    image: "/images/ZmStb5s/1.jpg",
     link: "/blog001",
   },
   {
@@ -32,7 +33,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     tag: "Data Science",
     title: "4 Key Points in Data Science",
     date: "March 09, 2023",
-    image: "https://i.ibb.co/C9f9Jfb/1.jpg",
+    image: "/images/C9f9Jfb/1.jpg",
     link: "/blog002",
   },
   {
@@ -40,7 +41,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     tag: "Web Development",
     title: "Key Points of Web Development",
     date: "May 11, 2023",
-    image: "https://i.ibb.co/m8f8hqJ/1.jpg",
+    image: "/images/m8f8hqJ/1.jpg",
     link: "/blog003",
   },
   {
@@ -48,7 +49,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     tag: "Mobile Development",
     title: "The Essentials of Mobile Development",
     date: "Feb 11, 2023",
-    image: "https://i.ibb.co/rycm16G/19198999.jpg",
+    image: "/images/rycm16G/19198999.jpg",
     link: "/blog004",
   },
   {
@@ -56,7 +57,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     tag: "Photography",
     title: "Exploring the Essentials of Photography",
     date: "March 1, 2023",
-    image: "https://i.ibb.co/Bj5TyTh/1.jpg",
+    image: "/images/Bj5TyTh/1.jpg",
     link: "/blog005",
   },
   {
@@ -64,7 +65,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     tag: "Art & Design",
     title: "The Essentials of Art and Design",
     date: "March 11, 2023",
-    image: "https://i.ibb.co/kyDchDr/1.jpg",
+    image: "/images/kyDchDr/1.jpg",
     link: "/blog006",
   },
 ];
@@ -75,7 +76,7 @@ const mainArticles = [
     title: "Your One-Stop Learning Destination: Courses, Videos, and Tutorials",
     tag: "Education",
     date: "March 11, 2023",
-    image: "https://i.ibb.co/Tc5j1Tk/1.jpg",
+    image: "/images/Tc5j1Tk/1.jpg",
     link: "/blog007",
     description:
       "Welcome to our website, where you can access a comprehensive library of free courses and tutorials on programming, CSS, Photoshop, and much more. Our user-friendly platform makes it easy for you to learn anything you want without having to waste time searching for videos. With our website, you can unlock your potential and become a pro in no time! Start learning today and take your skills to the next level.",
@@ -85,7 +86,7 @@ const mainArticles = [
     title: "Unlocking the Benefits of Online Education for Kids",
     tag: "Education",
     date: "May 1, 2023",
-    image: "https://i.ibb.co/bP74jdm/1.jpg",
+    image: "/images/bP74jdm/1.jpg",
     link: "/blog008",
     description:
       "Discover the advantages of online education for kids, from personalized learning to a safe and interactive environment. Explore the benefits of flexible schedules and access to a wide range of educational resources. With online education, kids can thrive academically and develop essential skills for their future.",
@@ -95,7 +96,7 @@ const mainArticles = [
     title: "Time Management: Strategies for Utilizing Your Time Effectively",
     tag: "Productivity",
     date: "April 11, 2023",
-    image: "https://i.ibb.co/pbXmkdr/1.jpg",
+    image: "/images/pbXmkdr/1.jpg",
     link: "/blog009",
     description:
       "Discover practical strategies for managing your time effectively, from setting priorities to delegating tasks. Learn how to eliminate distractions, take regular breaks, and create a schedule that works for you. By utilizing these tips, you can make the most of your time and achieve your goals with greater ease.",
@@ -127,10 +128,11 @@ export default function BlogPage() {
     <div className="pt-[160px] pb-[100px] flex flex-col items-center px-4">
       {/* Top Banner Image */}
       <div className="max-w-[800px] mb-8 w-full flex justify-center">
-        {/* eslint-disable-next-js/no-img-element */}
-        <img
-          src="https://i.ibb.co/smxrbMy/Blogging-removebg-preview.png"
+        <Image
+          src="/images/smxrbMy/Blogging-removebg-preview.png"
           alt="Blogging Illustration"
+          width={800}
+          height={400}
           className="w-full h-auto object-contain"
         />
       </div>
@@ -151,11 +153,15 @@ export default function BlogPage() {
               key={blog.id}
               className="bg-[#f9f9f9] rounded-xl shadow-[0_2px_4px_rgba(0,0,0,0.2)] p-5 flex flex-col items-center hover:bg-[#e9e9e9] transition-all duration-300"
             >
-              <img
-                src={blog.image}
-                alt={blog.title}
-                className="w-full h-[300px] object-cover rounded-lg shadow-md"
-              />
+              <div className="relative w-full h-[300px] overflow-hidden rounded-lg shadow-md">
+                <Image
+                  src={blog.image}
+                  alt={blog.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 500px"
+                  className="object-cover"
+                />
+              </div>
               <Link href={blog.link} className="my-5">
                 <button className="bg-[#0088e5] hover:bg-[#0070c0] text-white font-semibold py-2 px-6 rounded-full transition-colors cursor-pointer border-none shadow">
                   {blog.tag}
@@ -185,11 +191,15 @@ export default function BlogPage() {
             key={article.id}
             className="flex flex-col items-center bg-white p-6 sm:p-10 rounded-2xl shadow-lg border border-gray-100"
           >
-            <img
-              src={article.image}
-              alt={article.title}
-              className="w-full max-w-[700px] h-auto rounded-2xl shadow-xl mb-8 object-cover"
-            />
+            <div className="relative w-full max-w-[700px] h-[380px] rounded-2xl shadow-xl mb-8 overflow-hidden">
+              <Image
+                src={article.image}
+                alt={article.title}
+                fill
+                sizes="(max-width: 768px) 100vw, 700px"
+                className="object-cover"
+              />
+            </div>
             <h4 className="text-2xl sm:text-3xl font-semibold text-center text-gray-900 mb-4 leading-tight">
               {article.title}
             </h4>

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { collection, getDocs, deleteDoc, doc, query, orderBy } from "firebase/firestore";
 import { db } from "@/lib/firebase";
 
@@ -71,13 +72,17 @@ const UpdateKidCorner: React.FC = () => {
               className="bg-[#f9f9f9] border border-gray-200 rounded-xl overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow"
             >
               <div>
-                <div className="w-full h-44 overflow-hidden bg-gray-200">
-                  {/* eslint-disable-next-js/no-img-element */}
-                  <img
-                    src={course.imageValue}
-                    alt={course.titleValue}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="relative w-full h-44 overflow-hidden bg-gray-200">
+                  {course.imageValue && (
+                    <Image
+                      src={course.imageValue}
+                      alt={course.titleValue || "Kid course"}
+                      fill
+                      sizes="300px"
+                      className="object-cover"
+                      unoptimized={course.imageValue.startsWith("http")}
+                    />
+                  )}
                 </div>
                 <div className="p-5">
                   <h3 className="text-lg font-bold text-gray-900 mb-2 truncate">

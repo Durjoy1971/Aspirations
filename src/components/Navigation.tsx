@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { auth } from "@/lib/firebase";
 import { signOut } from "firebase/auth";
@@ -73,12 +74,13 @@ const Navigation: React.FC = () => {
       >
         <div className="max-w-[1400px] mx-auto flex items-center justify-between">
           <Link href="/home" className="flex-shrink-0">
-            {/* eslint-disable-next-js/no-img-element */}
-            <img
-              src="https://i.ibb.co/3RPhwRx/logo003.png"
+            <Image
+              src="/images/3RPhwRx/logo003.png"
               alt="Aspiration logo"
-              style={{ width: "15vw", minWidth: "200px" }}
-              className="object-contain"
+              width={220}
+              height={55}
+              priority
+              className="object-contain w-[15vw] min-w-[200px] h-auto"
             />
           </Link>
 
