@@ -3,7 +3,7 @@
 import React, { useEffect, useState, Suspense } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { YouTubeVideo } from "@/lib/youtube";
+import { YouTubeVideo, getVideoById } from "@/lib/youtube";
 
 function VideoPlayerContent() {
   const params = useParams();
@@ -14,17 +14,45 @@ function VideoPlayerContent() {
     window.scrollTo(0, 0);
     document.title = "Video Player | Aspiration";
 
-    if (typeof window !== "undefined" && id) {
+    if (!id) return;
+
+    if (typeof window !== "undefined") {
       const stored = sessionStorage.getItem(`video_${id}`);
       if (stored) {
         try {
-          setVideo(JSON.parse(stored));
+          const parsed = JSON.parse(stored);
+          if (parsed && parsed.title) {
+            setVideo(parsed);
+            document.title = `${parsed.title} | Aspiration`;
+            return;
+          }
         } catch (e) {
-          console.error(e);
+          console.error("Error reading stored video:", e);
         }
       }
+
+      // If video is not in sessionStorage, automatically fetch video details
+      getVideoById(id)
+        .then((fetchedVideo) => {
+          if (fetchedVideo) {
+            setVideo(fetchedVideo);
+            sessionStorage.setItem(`video_${id}`, JSON.stringify(fetchedVideo));
+            if (fetchedVideo.title) {
+              document.title = `${fetchedVideo.title} | Aspiration`;
+            }
+          }
+        })
+        .catch((err) => {
+          console.error("Error fetching video details:", err);
+        });
     }
   }, [id]);
+
+  useEffect(() => {
+    if (video?.title) {
+      document.title = `${video.title} | Aspiration`;
+    }
+  }, [video?.title]);
 
   return (
     <div className="flex flex-col min-h-screen pt-[130px] pb-[100px] px-4">

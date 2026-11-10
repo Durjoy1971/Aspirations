@@ -27,6 +27,51 @@ const nextConfig: NextConfig = {
         destination: "/kids",
         permanent: true,
       },
+      {
+        source: "/blog001",
+        destination: "/blog/learn-to-code-beginners-edition",
+        permanent: true,
+      },
+      {
+        source: "/blog002",
+        destination: "/blog/4-key-points-in-data-science",
+        permanent: true,
+      },
+      {
+        source: "/blog003",
+        destination: "/blog/key-points-of-web-development",
+        permanent: true,
+      },
+      {
+        source: "/blog004",
+        destination: "/blog/essentials-of-mobile-development",
+        permanent: true,
+      },
+      {
+        source: "/blog005",
+        destination: "/blog/essentials-of-photography",
+        permanent: true,
+      },
+      {
+        source: "/blog006",
+        destination: "/blog/essentials-of-art-and-design",
+        permanent: true,
+      },
+      {
+        source: "/blog007",
+        destination: "/blog/one-stop-learning-destination",
+        permanent: true,
+      },
+      {
+        source: "/blog008",
+        destination: "/blog/online-education-for-kids",
+        permanent: true,
+      },
+      {
+        source: "/blog009",
+        destination: "/blog/time-management-strategies",
+        permanent: true,
+      },
     ];
   },
   turbopack: {

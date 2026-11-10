@@ -9,6 +9,7 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { getBlogById } from "@/data/blogs";
 
 interface CarouselBlogItem {
   id: string;
@@ -26,7 +27,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     title: "Learn to Code: Beginner's Edition",
     date: "March 11, 2023",
     image: "/images/ZmStb5s/1.jpg",
-    link: "/blog001",
+    link: `/blog/${getBlogById("001")?.slug ?? "learn-to-code-beginners-edition"}`,
   },
   {
     id: "002",
@@ -34,7 +35,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     title: "4 Key Points in Data Science",
     date: "March 09, 2023",
     image: "/images/C9f9Jfb/1.jpg",
-    link: "/blog002",
+    link: `/blog/${getBlogById("002")?.slug ?? "4-key-points-in-data-science"}`,
   },
   {
     id: "003",
@@ -42,7 +43,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     title: "Key Points of Web Development",
     date: "May 11, 2023",
     image: "/images/m8f8hqJ/1.jpg",
-    link: "/blog003",
+    link: `/blog/${getBlogById("003")?.slug ?? "key-points-of-web-development"}`,
   },
   {
     id: "004",
@@ -50,7 +51,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     title: "The Essentials of Mobile Development",
     date: "Feb 11, 2023",
     image: "/images/rycm16G/19198999.jpg",
-    link: "/blog004",
+    link: `/blog/${getBlogById("004")?.slug ?? "essentials-of-mobile-development"}`,
   },
   {
     id: "005",
@@ -58,7 +59,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     title: "Exploring the Essentials of Photography",
     date: "March 1, 2023",
     image: "/images/Bj5TyTh/1.jpg",
-    link: "/blog005",
+    link: `/blog/${getBlogById("005")?.slug ?? "essentials-of-photography"}`,
   },
   {
     id: "006",
@@ -66,7 +67,7 @@ const carouselBlogs: CarouselBlogItem[] = [
     title: "The Essentials of Art and Design",
     date: "March 11, 2023",
     image: "/images/kyDchDr/1.jpg",
-    link: "/blog006",
+    link: `/blog/${getBlogById("006")?.slug ?? "essentials-of-art-and-design"}`,
   },
 ];
 
@@ -77,7 +78,7 @@ const mainArticles = [
     tag: "Education",
     date: "March 11, 2023",
     image: "/images/Tc5j1Tk/1.jpg",
-    link: "/blog007",
+    link: `/blog/${getBlogById("007")?.slug ?? "one-stop-learning-destination"}`,
     description:
       "Welcome to our website, where you can access a comprehensive library of free courses and tutorials on programming, CSS, Photoshop, and much more. Our user-friendly platform makes it easy for you to learn anything you want without having to waste time searching for videos. With our website, you can unlock your potential and become a pro in no time! Start learning today and take your skills to the next level.",
   },
@@ -87,7 +88,7 @@ const mainArticles = [
     tag: "Education",
     date: "May 1, 2023",
     image: "/images/bP74jdm/1.jpg",
-    link: "/blog008",
+    link: `/blog/${getBlogById("008")?.slug ?? "online-education-for-kids"}`,
     description:
       "Discover the advantages of online education for kids, from personalized learning to a safe and interactive environment. Explore the benefits of flexible schedules and access to a wide range of educational resources. With online education, kids can thrive academically and develop essential skills for their future.",
   },
@@ -97,7 +98,7 @@ const mainArticles = [
     tag: "Productivity",
     date: "April 11, 2023",
     image: "/images/pbXmkdr/1.jpg",
-    link: "/blog009",
+    link: `/blog/${getBlogById("009")?.slug ?? "time-management-strategies"}`,
     description:
       "Discover practical strategies for managing your time effectively, from setting priorities to delegating tasks. Learn how to eliminate distractions, take regular breaks, and create a schedule that works for you. By utilizing these tips, you can make the most of your time and achieve your goals with greater ease.",
   },

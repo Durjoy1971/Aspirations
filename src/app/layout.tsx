@@ -43,6 +43,7 @@ const leagueSpartan = League_Spartan({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://aspiration.edu"),
   title: "Aspiration",
   description: "Online courses, video tutorials, and kids learning platform",
   icons: {

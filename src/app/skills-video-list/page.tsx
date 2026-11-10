@@ -1,11 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import VideoCard from "@/components/VideoCard";
-import { YouTubeVideo } from "@/lib/youtube";
+import { YouTubeVideo, searchYoutube } from "@/lib/youtube";
 import Link from "next/link";
 
-export default function SkillsVideoListPage() {
+function SkillsVideoListContent() {
+  const searchParams = useSearchParams();
+  const q = searchParams.get("q");
+
   const [videos, setVideos] = useState<YouTubeVideo[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -13,19 +17,49 @@ export default function SkillsVideoListPage() {
     window.scrollTo(0, 0);
     document.title = "Course Videos | Aspiration";
 
+    let storedVideos: YouTubeVideo[] | null = null;
     if (typeof window !== "undefined") {
       const stored = sessionStorage.getItem("skill_videos");
       if (stored) {
         try {
           const parsed = JSON.parse(stored);
-          setVideos(Array.isArray(parsed) ? parsed : []);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            storedVideos = parsed;
+          }
         } catch (e) {
           console.error("Error reading stored videos", e);
         }
       }
+    }
+
+    if (storedVideos && storedVideos.length > 0) {
+      setVideos(storedVideos);
+      setLoading(false);
+      return;
+    }
+
+    // If sessionStorage is empty, check query param ?q=...
+    if (q && q.trim()) {
+      setLoading(true);
+      searchYoutube(q.trim())
+        .then((fetchedVideos) => {
+          setVideos(fetchedVideos);
+          if (typeof window !== "undefined") {
+            sessionStorage.setItem("skill_videos", JSON.stringify(fetchedVideos));
+          }
+        })
+        .catch((err) => {
+          console.error("Error fetching videos for query:", err);
+          setVideos([]);
+        })
+        .finally(() => {
+          setLoading(false);
+        });
+    } else {
+      setVideos([]);
       setLoading(false);
     }
-  }, []);
+  }, [q]);
 
   return (
     <div className="pt-[160px] pb-[100px] px-4 md:px-[100px] min-h-screen">
@@ -64,3 +98,16 @@ export default function SkillsVideoListPage() {
   );
 }
 
+export default function SkillsVideoListPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="pt-[160px] pb-[100px] text-center py-20 text-gray-500 text-xl">
+          Loading videos...
+        </div>
+      }
+    >
+      <SkillsVideoListContent />
+    </Suspense>
+  );
+}
