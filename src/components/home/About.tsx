@@ -31,8 +31,8 @@ const About: React.FC = () => {
             personalized career development plans. Let us guide you towards unlocking new
             possibilities and reaching your professional goals.
           </p>
-          <Link href="/skills">
-            <button className="btn btn-primary">Get Started Today</button>
+          <Link href="/skills" className="btn btn-primary">
+            Get Started Today
           </Link>
         </div>
       </div>

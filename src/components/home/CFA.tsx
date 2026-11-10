@@ -18,8 +18,8 @@ const CFA: React.FC = () => {
           </h1>
         </div>
         <div>
-          <Link href="/login">
-            <button className="btn btn-primary whitespace-nowrap">Register Now</button>
+          <Link href="/login" className="btn btn-primary whitespace-nowrap">
+            Register Now
           </Link>
         </div>
       </div>

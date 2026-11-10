@@ -162,10 +162,11 @@ export default function BlogPage() {
                   className="object-cover"
                 />
               </div>
-              <Link href={blog.link} className="my-5">
-                <button className="bg-[#0088e5] hover:bg-[#0070c0] text-white font-semibold py-2 px-6 rounded-full transition-colors cursor-pointer border-none shadow">
-                  {blog.tag}
-                </button>
+              <Link
+                href={blog.link}
+                className="my-5 inline-block bg-[#0088e5] hover:bg-[#0070c0] text-white font-semibold py-2 px-6 rounded-full transition-colors cursor-pointer border-none shadow no-underline"
+              >
+                {blog.tag}
               </Link>
               <h5 className="font-bold text-xl text-center text-gray-900 mt-2">
                 {blog.title}
@@ -210,11 +211,12 @@ export default function BlogPage() {
             <p className="text-gray-700 text-base leading-relaxed text-justify mb-8 max-w-[850px]">
               {article.description}
             </p>
-            <Link href={article.link}>
-              <button className="inline-flex items-center gap-2 bg-[#0099ff] hover:bg-[#0088e5] text-white px-6 py-3 rounded-lg text-base font-medium shadow-[0_0_15px_rgb(2,194,252)] transition-all cursor-pointer border-none">
-                <span>Read More</span>
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
+            <Link
+              href={article.link}
+              className="inline-flex items-center gap-2 bg-[#0099ff] hover:bg-[#0088e5] text-white px-6 py-3 rounded-lg text-base font-medium shadow-[0_0_15px_rgb(2,194,252)] transition-all cursor-pointer border-none no-underline"
+            >
+              <span>Read More</span>
+              <FontAwesomeIcon icon={faArrowRight} />
             </Link>
           </div>
         ))}

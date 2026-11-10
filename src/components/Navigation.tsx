@@ -23,7 +23,7 @@ const Navigation: React.FC = () => {
       .then(() => {
         dispatch({ type: "LOGOUT" });
         alert("Log out successful");
-        router.push("/home");
+        router.push("/");
       })
       .catch((error) => console.log(error));
   };
@@ -73,7 +73,7 @@ const Navigation: React.FC = () => {
         className="fixed top-0 left-0 w-full z-50 transition-all duration-300"
       >
         <div className="max-w-[1400px] mx-auto flex items-center justify-between">
-          <Link href="/home" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0">
             <Image
               src="/images/3RPhwRx/logo003.png"
               alt="Aspiration logo"
@@ -96,7 +96,7 @@ const Navigation: React.FC = () => {
           {/* Desktop Nav */}
           <nav className="hidden xl:flex items-center gap-6">
             <Link
-              href="/home"
+              href="/"
               className="durjoy text-black font-medium text-[15px] py-4 px-2 hover:text-[#555] transition-colors"
               style={{ fontFamily: "var(--font-rubik)" }}
             >
@@ -167,7 +167,7 @@ const Navigation: React.FC = () => {
         {mobileMenuOpen && (
           <div className="xl:hidden bg-white shadow-lg mt-3 p-4 rounded-lg flex flex-col gap-3">
             <Link
-              href="/home"
+              href="/"
               onClick={() => setMobileMenuOpen(false)}
               className="text-black font-medium text-[15px] py-2 border-b border-gray-100"
             >

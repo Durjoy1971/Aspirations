@@ -97,8 +97,8 @@ const FavSkills: React.FC = () => {
         </ul>
 
         <div className="mt-[50px]">
-          <Link href="/skills">
-            <button className="fav-btn-primary">View All Courses</button>
+          <Link href="/skills" className="fav-btn-primary no-underline inline-block">
+            View All Courses
           </Link>
         </div>
       </div>

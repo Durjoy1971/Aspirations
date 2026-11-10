@@ -35,8 +35,8 @@ const AboutUs: React.FC = () => {
           </h4>
 
           <div className="mt-[30px]">
-            <Link href="/aboutus">
-              <button className="fav-btn-primary">Read More</button>
+            <Link href="/aboutus" className="fav-btn-primary no-underline inline-block">
+              Read More
             </Link>
           </div>
         </div>

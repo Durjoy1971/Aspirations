@@ -1,4 +1,7 @@
-const API_KEY = "AIzaSyCbpYT02musRYo3YlAjsbuOjPw9nYJxbZQ";
+const API_KEY =
+  process.env.NEXT_PUBLIC_YOUTUBE_API_KEY ||
+  process.env.YOUTUBE_API_KEY ||
+  "";
 
 export interface YouTubeVideo {
   id: string;

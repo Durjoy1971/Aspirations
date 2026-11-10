@@ -30,7 +30,7 @@ export default function AdminLoginPage() {
               email: userCredential.user.email || "",
             },
           });
-          router.push("/home");
+          router.push("/");
         } else {
           signOut(auth).then(() => {
             dispatch({ type: "LOGOUT" });
@@ -46,65 +46,48 @@ export default function AdminLoginPage() {
 
   return (
     <div className="pt-[140px] pb-[100px] flex justify-center items-center min-h-[70vh]">
-      <div className="relative flex justify-center items-center w-[300px] h-[300px]">
-        {/* Animated circle spans */}
-        {[...Array(50)].map((_, index) => (
-          <span
-            key={index}
-            className="absolute left-[18px] w-[32px] h-[6px] rounded-lg pointer-events-none"
-            style={{
-              background: "darkcyan",
-              transform: `scale(2.2) rotate(${index * (360 / 50)}deg)`,
-              transformOrigin: "128px",
-              animation: "animateBlink 3s linear infinite",
-              animationDelay: `${index * (3 / 50)}s`,
-            }}
-          />
-        ))}
+      {/* Login box */}
+      <div className="w-[380px] sm:w-[420px] bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-gray-100">
+        <h2 className="text-black font-semibold text-center text-[28px] mb-8">
+          Admin Login
+        </h2>
 
-        {/* Login box */}
-        <div className="absolute z-10 w-[380px] sm:w-[420px] bg-white/95 backdrop-blur-md p-8 rounded-2xl shadow-2xl border border-gray-100">
-          <h2 className="text-black font-semibold text-center text-[28px] mb-8">
-            Admin Login
-          </h2>
+        <form onSubmit={handleLogin} className="space-y-6">
+          <div className="relative">
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder=" "
+              className="peer w-full h-[50px] bg-transparent border-2 border-purple-800 rounded-full text-base text-purple-900 px-5 outline-none focus:border-yellow-600 transition-colors"
+            />
+            <label className="absolute left-5 top-1/2 -translate-y-1/2 text-blue-700 font-bold text-base pointer-events-none transition-all duration-300 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:bg-teal-700 peer-focus:text-yellow-300 peer-focus:px-2 peer-focus:rounded peer-[:not(:placeholder-shown)]:-top-2.5 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:bg-teal-700 peer-[:not(:placeholder-shown)]:text-yellow-300 peer-[:not(:placeholder-shown)]:px-2 peer-[:not(:placeholder-shown)]:rounded">
+              Email
+            </label>
+          </div>
 
-          <form onSubmit={handleLogin} className="space-y-6">
-            <div className="relative">
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder=" "
-                className="peer w-full h-[50px] bg-transparent border-2 border-purple-800 rounded-full text-base text-purple-900 px-5 outline-none focus:border-yellow-600 transition-colors"
-              />
-              <label className="absolute left-5 top-1/2 -translate-y-1/2 text-blue-700 font-bold text-base pointer-events-none transition-all duration-300 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:bg-teal-700 peer-focus:text-yellow-300 peer-focus:px-2 peer-focus:rounded peer-[:not(:placeholder-shown)]:-top-2.5 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:bg-teal-700 peer-[:not(:placeholder-shown)]:text-yellow-300 peer-[:not(:placeholder-shown)]:px-2 peer-[:not(:placeholder-shown)]:rounded">
-                Email
-              </label>
-            </div>
+          <div className="relative">
+            <input
+              type="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder=" "
+              className="peer w-full h-[50px] bg-transparent border-2 border-purple-800 rounded-full text-base text-purple-900 px-5 outline-none focus:border-yellow-600 transition-colors"
+            />
+            <label className="absolute left-5 top-1/2 -translate-y-1/2 text-blue-700 font-bold text-base pointer-events-none transition-all duration-300 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:bg-teal-700 peer-focus:text-yellow-300 peer-focus:px-2 peer-focus:rounded peer-[:not(:placeholder-shown)]:-top-2.5 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:bg-teal-700 peer-[:not(:placeholder-shown)]:text-yellow-300 peer-[:not(:placeholder-shown)]:px-2 peer-[:not(:placeholder-shown)]:rounded">
+              Password
+            </label>
+          </div>
 
-            <div className="relative">
-              <input
-                type="password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder=" "
-                className="peer w-full h-[50px] bg-transparent border-2 border-purple-800 rounded-full text-base text-purple-900 px-5 outline-none focus:border-yellow-600 transition-colors"
-              />
-              <label className="absolute left-5 top-1/2 -translate-y-1/2 text-blue-700 font-bold text-base pointer-events-none transition-all duration-300 peer-focus:-top-2.5 peer-focus:text-xs peer-focus:bg-teal-700 peer-focus:text-yellow-300 peer-focus:px-2 peer-focus:rounded peer-[:not(:placeholder-shown)]:-top-2.5 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:bg-teal-700 peer-[:not(:placeholder-shown)]:text-yellow-300 peer-[:not(:placeholder-shown)]:px-2 peer-[:not(:placeholder-shown)]:rounded">
-                Password
-              </label>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full h-[45px] bg-[#02ebfc] hover:bg-[#00c8d8] text-black font-bold rounded-full text-[18px] transition-colors cursor-pointer border-none shadow-md"
-            >
-              Login
-            </button>
-          </form>
-        </div>
+          <button
+            type="submit"
+            className="w-full h-[45px] bg-[#02ebfc] hover:bg-[#00c8d8] text-black font-bold rounded-full text-[18px] transition-colors cursor-pointer border-none shadow-md"
+          >
+            Login
+          </button>
+        </form>
       </div>
     </div>
   );

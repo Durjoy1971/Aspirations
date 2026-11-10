@@ -27,8 +27,8 @@ const Banner: React.FC = () => {
             believe that education is not just about acquiring knowledge, but also about
             instilling a love for learning and empowering children to become lifelong learners.
           </p>
-          <Link href="/kids">
-            <button className="btn btn-primary">Discover More</button>
+          <Link href="/kids" className="btn btn-primary">
+            Discover More
           </Link>
         </div>
         <figure className="m-0 flex justify-center">

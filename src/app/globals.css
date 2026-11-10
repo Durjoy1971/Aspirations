@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import "slick-carousel/slick/slick.css";
-@import "slick-carousel/slick/slick-theme.css";
 
 :root {
   --font-poppins: 'Poppins', sans-serif;
@@ -132,15 +130,6 @@ body {
   background-color: gray;
 }
 
-/* Admin Animations */
-@keyframes animateBlink {
-  33% {
-    background-color: yellow;
-  }
-  66% {
-    background-color: red;
-  }
-}
 
 /* Blog Detail Styles */
 .blog1 {

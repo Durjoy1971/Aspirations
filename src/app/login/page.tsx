@@ -47,7 +47,7 @@ export default function LoginPage() {
             email: userCredential.user.email || "",
           },
         });
-        router.push("/home");
+        router.push("/");
       } else {
         alert("Please verify your email before logging in.");
       }

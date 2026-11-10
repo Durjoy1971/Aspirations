@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
       <div className="max-w-[70vw] mx-auto pt-[60px] pb-[20px] mb-[40px]">
         {/* Brand */}
         <div className="mb-[30px]">
-          <Link href="/home">
+          <Link href="/">
             <Image
               src="/images/3RPhwRx/logo003.png"
               alt="Aspiration logo"
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-[10px] p-0 list-none">
               <li>
                 <Link
-                  href="/home"
+                  href="/"
                   className="text-[#bbbbbb] hover:text-[#e91e63] hover:pl-[15px] transition-all duration-500 capitalize text-[18px] font-medium block"
                 >
                   Home
