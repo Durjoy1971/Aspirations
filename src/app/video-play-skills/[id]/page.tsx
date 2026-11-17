@@ -1,14 +1,23 @@
 "use client";
 
-import React, { useEffect, useState, Suspense } from "react";
-import { useParams } from "next/navigation";
+import React, { useEffect, useState, useContext, Suspense } from "react";
+import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { YouTubeVideo, getVideoById } from "@/lib/youtube";
+import { UserContext } from "@/context/UserContext";
 
 function VideoPlayerContent() {
+  const { state } = useContext(UserContext);
+  const router = useRouter();
   const params = useParams();
   const id = typeof params?.id === "string" ? params.id : Array.isArray(params?.id) ? params.id[0] : "";
   const [video, setVideo] = useState<Partial<YouTubeVideo> | null>(null);
+
+  useEffect(() => {
+    if (!state.isLoading && !state.isLoggedIn) {
+      router.replace("/login?from=/video-play-skills");
+    }
+  }, [state.isLoading, state.isLoggedIn, router]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

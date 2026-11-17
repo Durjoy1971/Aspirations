@@ -70,8 +70,17 @@ export default function SkillsPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Skills | Aspiration";
-    fetchCourses();
   }, []);
+
+  useEffect(() => {
+    if (!state.isLoading) {
+      if (!state.isLoggedIn) {
+        router.replace("/login?from=/skills");
+      } else {
+        fetchCourses();
+      }
+    }
+  }, [state.isLoading, state.isLoggedIn, router]);
 
   const fetchCourses = async () => {
     try {

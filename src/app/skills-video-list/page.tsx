@@ -1,17 +1,26 @@
 "use client";
 
-import React, { useEffect, useState, Suspense } from "react";
-import { useSearchParams } from "next/navigation";
+import React, { useEffect, useState, useContext, Suspense } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import VideoCard from "@/components/VideoCard";
 import { YouTubeVideo, searchYoutube } from "@/lib/youtube";
+import { UserContext } from "@/context/UserContext";
 import Link from "next/link";
 
 function SkillsVideoListContent() {
+  const { state } = useContext(UserContext);
+  const router = useRouter();
   const searchParams = useSearchParams();
   const q = searchParams.get("q");
 
   const [videos, setVideos] = useState<YouTubeVideo[]>([]);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (!state.isLoading && !state.isLoggedIn) {
+      router.replace("/login?from=/skills-video-list");
+    }
+  }, [state.isLoading, state.isLoggedIn, router]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

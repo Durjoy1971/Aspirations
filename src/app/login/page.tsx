@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, Suspense } from "react";
 import Image from "next/image";
 import {
   signInWithEmailAndPassword,
@@ -9,15 +9,16 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "@/lib/firebase";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { UserContext } from "@/context/UserContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { toast } from "sonner";
 
-export default function LoginPage() {
+function LoginForm() {
   const { dispatch } = useContext(UserContext);
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const [isSignUpMode, setIsSignUpMode] = useState(false);
 
@@ -40,6 +41,7 @@ export default function LoginPage() {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, signInEmail, signInPassword);
       if (userCredential.user.emailVerified || userCredential.user.email === "durjoybarua1971@gmail.com") {
+        document.cookie = "user_auth=true; path=/; max-age=86400; SameSite=Lax";
         toast.success("Signed in successfully!");
         dispatch({
           type: "LOGIN",
@@ -48,7 +50,8 @@ export default function LoginPage() {
             email: userCredential.user.email || "",
           },
         });
-        router.push("/");
+        const from = searchParams.get("from");
+        router.push(from || "/");
       } else {
         toast.error("Please verify your email before logging in.");
       }
@@ -234,9 +237,10 @@ export default function LoginPage() {
           <Image
             src="/images/shapes/log.svg"
             alt="Sign in illustration"
-            width={280}
-            height={280}
+            width={1141}
+            height={787}
             className="w-[280px] max-w-full h-auto"
+            style={{ width: "280px", height: "auto" }}
           />
         </div>
 
@@ -261,9 +265,10 @@ export default function LoginPage() {
           <Image
             src="/images/shapes/register.svg"
             alt="Sign up illustration"
-            width={280}
-            height={280}
+            width={999}
+            height={797}
             className="w-[280px] max-w-full h-auto"
+            style={{ width: "280px", height: "auto" }}
           />
         </div>
       </div>
@@ -278,6 +283,20 @@ export default function LoginPage() {
         </button>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-[88vh] flex justify-center items-center">
+          <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
+        </div>
+      }
+    >
+      <LoginForm />
+    </Suspense>
   );
 }
 

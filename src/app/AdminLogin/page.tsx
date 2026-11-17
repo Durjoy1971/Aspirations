@@ -26,6 +26,7 @@ function AdminLoginForm() {
         const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL || "durjoybarua1971@gmail.com";
         if (email === adminEmail) {
           document.cookie = "admin_auth=true; path=/; max-age=86400; SameSite=Lax";
+          document.cookie = "user_auth=true; path=/; max-age=86400; SameSite=Lax";
           toast.success("Admin login successful");
           dispatch({
             type: "LOGIN",
@@ -39,6 +40,7 @@ function AdminLoginForm() {
         } else {
           signOut(auth).then(() => {
             document.cookie = "admin_auth=; path=/; max-age=0; SameSite=Lax";
+            document.cookie = "user_auth=; path=/; max-age=0; SameSite=Lax";
             dispatch({ type: "LOGOUT" });
             toast.error("You are not an Admin");
           });

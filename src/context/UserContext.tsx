@@ -61,6 +61,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
           user.emailVerified ||
           user.email === (process.env.NEXT_PUBLIC_ADMIN_EMAIL || "durjoybarua1971@gmail.com")
         ) {
+          document.cookie = "user_auth=true; path=/; max-age=86400; SameSite=Lax";
           dispatch({
             type: "LOGIN",
             payload: {
@@ -69,9 +70,11 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
             },
           });
         } else {
+          document.cookie = "user_auth=; path=/; max-age=0; SameSite=Lax";
           dispatch({ type: "LOGOUT" });
         }
       } else {
+        document.cookie = "user_auth=; path=/; max-age=0; SameSite=Lax";
         dispatch({ type: "LOGOUT" });
       }
     });

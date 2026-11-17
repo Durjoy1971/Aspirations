@@ -57,8 +57,17 @@ export default function KidCornerPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Kid's Corner | Aspiration";
-    fetchCourses();
   }, []);
+
+  useEffect(() => {
+    if (!state.isLoading) {
+      if (!state.isLoggedIn) {
+        router.replace("/login?from=/kids");
+      } else {
+        fetchCourses();
+      }
+    }
+  }, [state.isLoading, state.isLoggedIn, router]);
 
   const fetchCourses = async () => {
     try {

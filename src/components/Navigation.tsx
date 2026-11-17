@@ -22,6 +22,7 @@ const Navigation: React.FC = () => {
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
+        document.cookie = "user_auth=; path=/; max-age=0; SameSite=Lax";
         document.cookie = "admin_auth=; path=/; max-age=0; SameSite=Lax";
         dispatch({ type: "LOGOUT" });
         toast.success("Logged out successfully");
