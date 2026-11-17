@@ -68,8 +68,8 @@ const Navigation: React.FC = () => {
             : "linear-gradient(90deg, hsl(38, 100%, 98%) 21.32%, hsl(144, 45%, 98%) 130%)",
           paddingTop: scrolled ? "20px" : "25px",
           paddingBottom: scrolled ? "20px" : "25px",
-          paddingLeft: "min(16.8vw, 120px)",
-          paddingRight: "min(8vw, 80px)",
+          paddingLeft: "clamp(16px, 10vw, 120px)",
+          paddingRight: "clamp(16px, 6vw, 80px)",
           boxShadow: scrolled ? "0 1px 3px hsla(0, 0%, 0%, 0.1)" : "none",
         }}
         className="fixed top-0 left-0 w-full z-50 transition-all duration-300"
@@ -82,7 +82,8 @@ const Navigation: React.FC = () => {
               width={220}
               height={55}
               priority
-              className="object-contain w-[15vw] min-w-[200px] h-auto"
+              className="object-contain w-[15vw] min-w-[170px] max-w-[220px]"
+              style={{ width: "auto", height: "auto" }}
             />
           </Link>
 

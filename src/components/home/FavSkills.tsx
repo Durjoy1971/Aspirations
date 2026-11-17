@@ -36,9 +36,10 @@ const FavSkills: React.FC = () => {
         <Image
           src="/images/shapes/departmets-vector.svg"
           alt="Vector line art"
-          width={400}
-          height={400}
+          width={492}
+          height={166}
           className="opacity-50 absolute right-0 top-0 pointer-events-none hidden lg:block"
+          style={{ width: "auto", height: "auto" }}
         />
 
         <h2

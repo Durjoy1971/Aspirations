@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const adminAuth = request.cookies.get("admin_auth")?.value;
 
   if (adminAuth !== "true") {
