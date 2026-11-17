@@ -21,7 +21,7 @@ const Introduce: React.FC = () => {
   };
 
   return (
-    <div className="relative flex justify-center items-center h-[50vw] min-h-[300px] bg-white overflow-hidden">
+    <div className="relative flex justify-center items-center h-[50vw] min-h-75 bg-white overflow-hidden">
       <Image
         src="/images/shapes/video-bg.png"
         alt="background wave top"
@@ -31,7 +31,7 @@ const Introduce: React.FC = () => {
         className="absolute top-0 w-full h-[30vw] object-cover pointer-events-none"
       />
 
-      <div className="relative flex justify-center items-center max-w-[1200px] w-full px-4 z-10">
+      <div className="relative flex justify-center items-center max-w-300 w-full px-4 z-10">
         <video
           ref={videoRef}
           onClick={handleVideoClick}
@@ -41,7 +41,7 @@ const Introduce: React.FC = () => {
           preload="metadata"
           poster="/images/intro-poster.jpg"
           playsInline
-          className="w-[60vw] max-w-[900px] aspect-video object-cover cursor-pointer shadow-xl"
+          className="w-[60vw] max-w-225 aspect-video object-cover cursor-pointer shadow-xl"
           style={{ borderBottomRightRadius: "40.5%" }}
         >
           <source src="/Intro.mp4" type="video/mp4" />
@@ -66,7 +66,7 @@ const Introduce: React.FC = () => {
           alt="design shape"
           width={186}
           height={186}
-          className="absolute right-[1vw] w-[10vw] max-w-[130px] min-w-[70px] pointer-events-none hidden sm:block"
+          className="absolute right-[1vw] w-[10vw] max-w-32.5 min-w-17.5 pointer-events-none hidden sm:block"
           style={{ width: "auto", height: "auto" }}
         />
       </div>
